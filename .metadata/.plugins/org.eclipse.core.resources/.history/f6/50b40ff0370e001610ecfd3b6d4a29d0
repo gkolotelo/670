@@ -1,0 +1,164 @@
+/**
+ *
+ * File name:        	interpreter.c                             
+ * File description: 	file containing the methods for interacting
+ * 						with a serial host  
+ *                    
+ * Authors:          	Guilherme Kairalla Kolotelo                     
+ * 		             	Kaique Arce de Almeida Camargo                  
+ * Creation date:    	22Apr2016                                       
+ * Revision date:    	28Apr2016                                       
+ *
+ */
+
+#include "interpreter.h"
+#include "hal/display_7segments/display_7segments.h"
+#include "hal/buzzer/buzzer.h"
+#include "hal/ledswi/ledswi.h"
+#include "fsl_debug_console.h"
+#include "fsl_device_registers.h"
+
+
+void interpreter_init()
+{
+	debugUart_init();
+}
+
+
+/**
+ * Method name:			sendACK
+ * Method description: 	Writes acknowledgment bytes to UART
+ * Input params:      	char cRetVal = an optional extra byte to be written                        
+ * Output params:     	n/a                        
+ */
+void sendACK(char cRetVal)
+{
+	char cRetStr[5] = "ACK\r\n";
+	if(cRetVal == ERROR)
+	{
+		cRetStr[0] ='E';
+		cRetStr[1] ='R';
+		cRetStr[2] ='R';
+	}
+	PUTCHAR(cRetStr[0]);
+	PUTCHAR(cRetStr[1]);
+	PUTCHAR(cRetStr[2]);
+	if(cRetVal != NONE && cRetVal != ERROR)
+		PUTCHAR(cRetVal);
+	PUTCHAR(cRetStr[3]);
+	PUTCHAR(cRetStr[4]);
+}
+
+
+
+/**
+ * Method name:			ledCommand
+ * Method description: 	Executes commands pertinent to led operation.
+ * Input params:      	n/a                      
+ * Output params:     	char = error code.                       
+ */
+char ledCommand()
+{
+	uint8_t uiCommand, uiLedPos;
+	while (UART0_BRD_S1_RDRF(UART0) == 0);
+	uiCommand = GETCHAR();
+	if(uiCommand != 'c' && uiCommand != 'C' && uiCommand != 's' && uiCommand != 'S')
+		return ERROR;
+	while (UART0_BRD_S1_RDRF(UART0) == 0);
+	uiLedPos = GETCHAR();
+	if(uiLedPos < 49 || uiLedPos > 52) // Leds 1 through 4
+		return ERROR;
+	uiLedPos = uiLedPos - 48;
+	switch(uiCommand)
+	{
+		case 'c':
+		case 'C':
+			ledswi_clearLed(uiLedPos);
+			return NONE;
+
+		case 's':
+		case 'S':
+			ledswi_setLed(uiLedPos);
+			return NONE;
+
+		default:
+			return ERROR;
+	}
+}
+
+
+/**
+ * Method name:			switchCommand
+ * Method description: 	Executes commands pertinent to switch operation.
+ * Input params:      	n/a                      
+ * Output params:     	char = error code.                       
+ */
+char switchCommand()
+{
+	uint8_t uiSwPos;
+	switch_status_type_e eStatus;
+	while (UART0_BRD_S1_RDRF(UART0) == 0);
+	uiSwPos = GETCHAR();
+	if(uiSwPos < 49 || uiSwPos > 52) // Switches 1 through 4
+		return ERROR;
+	uiSwPos = uiSwPos - 48;
+	eStatus = ledswi_getSwitchStatus(uiSwPos);
+	if(eStatus == SWITCH_OFF) return 'O';
+	if(eStatus == SWITCH_ON) return 'C';
+	return ERROR;
+}
+
+
+/**
+ * Method name:			buzzerCommand
+ * Method description: 	Executes commands pertinent to buzzer operation.
+ * Input params:      	n/a                      
+ * Output params:     	char = error code.                       
+ */
+char buzzerCommand()
+{
+	uint8_t ui100, ui10, ui1, uiTime;
+	while (UART0_BRD_S1_RDRF(UART0) == 0);
+	ui100 = GETCHAR();
+	PUTCHAR(ui100);
+	while (UART0_BRD_S1_RDRF(UART0) == 0);
+	ui10 = GETCHAR();
+	PUTCHAR(ui10);
+	while (UART0_BRD_S1_RDRF(UART0) == 0);
+	ui1 = GETCHAR();
+	PUTCHAR(ui1);
+	if((ui100 < 48 || ui100 > 57) || (ui10 < 48 || ui10 > 57) || (ui1 < 48 || ui1 > 57)) // 0 through 9
+		return ERROR;
+	ui100 = ui100 - 48;
+	ui10 = ui10 - 48;
+	ui1 = ui1 - 48;
+	uiTime = 100*ui100 + 10*ui10 + ui1;
+	buzzer_Buzz(uiTime);
+	return NONE;
+}
+
+void interpreter_readCommand()
+{
+	if(UART0_BRD_S1_RDRF(UART0) == 0) return 0;
+	uint8_t uiReceiveBuff, uiRetVal;
+	uiReceiveBuff = GETCHAR();
+	PUTCHAR(uiReceiveBuff);
+	switch(uiReceiveBuff)
+	{
+		case 'L':
+		case 'l':
+			uiRetVal = ledCommand();
+			break;
+		case 'S':
+		case 's':
+			uiRetVal = switchCommand();
+			break;
+		case 'B':
+		case 'b':
+			uiRetVal = buzzerCommand();
+			break;
+		default:
+			uiRetVal = ERROR;
+	}
+	sendACK(uiRetVal);
+}

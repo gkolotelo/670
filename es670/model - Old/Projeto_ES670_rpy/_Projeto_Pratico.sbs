@@ -1,0 +1,402 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
+{ ISubsystem 
+	- _id = GUID 20246198-4c47-4bfe-9397-a7aa14ffd20f;
+	- _myState = 8192;
+	- _name = "_Projeto_Pratico";
+	- _objectCreation = "5148052992016231710945";
+	- _umlDependencyID = "3146";
+	- Annotations = { IRPYRawContainer 
+		- size = 8;
+		- value = 
+		{ IComment 
+			- _id = GUID 28f0689a-ecff-4bb0-941d-4a8badc4b580;
+			- _myState = 2048;
+			- _name = "comment_0";
+			- _objectCreation = "5148072992016231710745";
+			- _umlDependencyID = "2393";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
+\\b0 Projeto Pr\\'e1tico - 1o semestre/2016\\par
+\\par
+Diagrama de Requisitos de Sistema\\par
+}
+";
+			}
+			- _body = "";
+		}
+		{ IComment 
+			- _id = GUID dec1f94f-1152-46e1-904d-55660096766c;
+			- _myState = 2048;
+			- _name = "comment_14";
+			- _objectCreation = "5148092992016231710545";
+			- _umlDependencyID = "2446";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\b\\fs24 ES670 -  Projeto de Sistemas Embarcados\\par
+\\b0 Projeto Pr\\'e1tico - 1o semestre/2016\\par
+\\par
+Diagrama de Defini\\'e7\\'e3o de Blocos\\par
+\\par
+}
+";
+			}
+			- _body = "";
+		}
+		{ IComment 
+			- _id = GUID ff49df2e-66b1-405c-9a1d-efad749c7d2c;
+			- _myState = 2048;
+			- _name = "comment_21";
+			- _objectCreation = "5148112992016231710345";
+			- _umlDependencyID = "2435";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
+\\b0 Projeto Pr\\'e1tico - 1o semestre/2016\\par
+\\par
+Diagrama de Pacotes\\par
+}
+";
+			}
+			- _body = "";
+		}
+		{ IComment 
+			- _id = GUID 5afd59e4-c604-4c4e-887e-b0d9ede1f18d;
+			- _myState = 2048;
+			- _name = "comment_23";
+			- _objectCreation = "5148132992016231710145";
+			- _umlDependencyID = "2437";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
+\\b0 Projeto Pr\\'e1tico - 1o semestre/2015\\par
+\\par
+Diagrama de Sequ\\'eancia - Interpretador de Comandos\\par
+\\par
+}
+";
+			}
+			- _body = "";
+		}
+		{ IComment 
+			- _id = GUID 86830b65-a694-45fb-86b8-7d602387707b;
+			- _myState = 2048;
+			- _name = "comment_25";
+			- _objectCreation = "5148152992016231709945";
+			- _umlDependencyID = "2457";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
+\\b0 Projeto Pr\\'e1tico - 1o semestre/2015\\par
+\\par
+Diagrama de Defini\\'e7\\'e3o de Blocos - \\b <<Subsystem>> LCD\\par
+}
+";
+			}
+			- _body = "";
+		}
+		{ IComment 
+			- _id = GUID f332d7c4-9288-4bf0-afd9-03ed3f251a6b;
+			- _myState = 2048;
+			- _name = "comment_27";
+			- _objectCreation = "5148172992016231709745";
+			- _umlDependencyID = "2459";
+			- _description = { IDescription 
+				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
+\\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
+\\b0 Projeto Pr\\'e1tico - 1o semestre/2015\\par
+\\par
+Bloco do ADC para ser integrado ao resto do sistema\\par
+}
+";
+			}
+			- _body = "";
+		}
+		{ IComment 
+			- _id = GUID 1c6aff64-4936-4d1f-a7e1-13ea01f4e0ae;
+			- _myState = 2048;
+			- _name = "comment_30";
+			- _objectCreation = "5148192992016231709545";
+			- _umlDependencyID = "2453";
+			- _description = { IDescription 
+				- _text = "#define D7S_UNGATE_CLOCK
+If defined, disables PORTC clock on the MCG after setting the muxes to preserve power. May interfere with third-party code.
+(Undefined by default)";
+			}
+			- _body = "";
+		}
+		{ IComment 
+			- _id = GUID 3700625d-bd7c-4fde-a679-6601254455fc;
+			- _myState = 2048;
+			- _name = "comment_34";
+			- _objectCreation = "5148212992016231709345";
+			- _umlDependencyID = "2448";
+			- _description = { IDescription 
+				- _text = "Folder (Stereotype):
+Indicates that the dependent is a subfolder within the dependee's folder";
+			}
+			- _body = "";
+		}
+	}
+	- _theMainDiagram = { IHandle 
+		- _m2Class = "IDiagram";
+		- _filename = "";
+		- _subsystem = "";
+		- _class = "";
+		- _name = "diag_pacotes";
+		- _id = GUID 604328de-2202-48b3-9d1a-353bbeb75331;
+	}
+	- _lastID = 35;
+	- Declaratives = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IStereotype 
+			- _id = GUID bdee0ab5-d5a0-4569-8f02-ac8f107b96c3;
+			- _myState = 8192;
+			- _name = "File";
+			- _objectCreation = "5148232992016231709145";
+			- _umlDependencyID = "1879";
+			- _m2Classes = { IRPYRawContainer 
+				- size = 1;
+				- value = "Class"; 
+			}
+		}
+	}
+	- weakCGTime = 4.28.2016::23:28:16;
+	- strongCGTime = 4.28.2016::23:28:1;
+	- _defaultComposite = GUID 0d5184b0-4db2-4cdb-a85e-27b5b9b2898f;
+	- _eventsBaseID = 29601;
+	- Classes = { IRPYRawContainer 
+		- size = 5;
+		- value = 
+		{ IClass 
+			- _id = GUID 0d5184b0-4db2-4cdb-a85e-27b5b9b2898f;
+			- _myState = 40960;
+			- _name = "TopLevel";
+			- _objectCreation = "5148252992016231708945";
+			- _umlDependencyID = "2315";
+			- weakCGTime = 4.28.2016::23:28:16;
+			- strongCGTime = 4.28.2016::23:28:1;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- Associations = { IRPYRawContainer 
+				- size = 2;
+				- value = 
+				{ IPart 
+					- _id = GUID 82daef9c-aaf9-4767-8594-7fc420a4242d;
+					- _myState = 10240;
+					- _name = "object_0";
+					- _objectCreation = "5148272992016231708745";
+					- _umlDependencyID = "2278";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID 05b260e0-8fae-4169-b763-e3f60058c5c2;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _implicitClass = { IClass 
+						- _id = GUID 05b260e0-8fae-4169-b763-e3f60058c5c2;
+						- _myState = 10240;
+						- _name = "object_0";
+						- _objectCreation = "5148292992016231708545";
+						- _umlDependencyID = "2278";
+						- _theMainDiagram = { IHandle 
+							- _m2Class = "IDiagram";
+							- _filename = "";
+							- _subsystem = "";
+							- _class = "";
+							- _name = "diag_definicao_semana_04_05";
+							- _id = GUID f53d507c-79b1-4f7f-850a-0c96a124e9bd;
+						}
+						- weakCGTime = 4.8.2016::15:39:19;
+						- strongCGTime = 4.8.2016::15:39:19;
+						- _multiplicity = "";
+						- _itsStateChart = { IHandle 
+							- _m2Class = "";
+						}
+						- _classModifier = Unspecified;
+					}
+				}
+				{ IPart 
+					- _id = GUID ef1f9db5-1300-4021-9b0c-36529cb575d5;
+					- _myState = 8192;
+					- _name = "fsl_debug_console";
+					- _objectCreation = "5148312992016231708345";
+					- _umlDependencyID = "3284";
+					- _multiplicity = "1";
+					- _otherClass = { IClassifierHandle 
+						- _m2Class = "IClass";
+						- _id = GUID f01f54ea-7227-46a0-a90d-aaa548b43cb3;
+					}
+					- _inverse = { IHandle 
+						- _m2Class = "";
+					}
+					- _implicitClass = { IClass 
+						- _id = GUID f01f54ea-7227-46a0-a90d-aaa548b43cb3;
+						- _myState = 10240;
+						- _name = "fsl_debug_console";
+						- _objectCreation = "5148332992016231708145";
+						- _umlDependencyID = "3284";
+						- Stereotypes = { IRPYRawContainer 
+							- size = 1;
+							- value = 
+							{ IHandle 
+								- _m2Class = "IStereotype";
+								- _id = GUID bdee0ab5-d5a0-4569-8f02-ac8f107b96c3;
+							}
+						}
+						- _theMainDiagram = { IHandle 
+							- _m2Class = "IDiagram";
+							- _filename = "";
+							- _subsystem = "";
+							- _class = "";
+							- _name = "diag_definicao_semana_04_05";
+							- _id = GUID f53d507c-79b1-4f7f-850a-0c96a124e9bd;
+						}
+						- weakCGTime = 4.28.2016::23:28:16;
+						- strongCGTime = 4.28.2016::23:28:16;
+						- _multiplicity = "";
+						- _itsStateChart = { IHandle 
+							- _m2Class = "";
+						}
+						- _classModifier = Unspecified;
+					}
+				}
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID d32248dd-74d9-479b-b8a9-cc8ac7ccc303;
+			- _myState = 8192;
+			- _name = "MKL25Z4";
+			- _objectCreation = "5148352992016231707945";
+			- _umlDependencyID = "1977";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _id = GUID bdee0ab5-d5a0-4569-8f02-ac8f107b96c3;
+				}
+			}
+			- weakCGTime = 3.30.2016::13:58:9;
+			- strongCGTime = 1.21.2016::20:16:59;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 08c1aede-ca9f-4ad1-a5c3-258b424cd52a;
+			- _myState = 8192;
+			- _name = "fsl_clock_manager";
+			- _objectCreation = "5148372992016231707745";
+			- _umlDependencyID = "3274";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _id = GUID bdee0ab5-d5a0-4569-8f02-ac8f107b96c3;
+				}
+			}
+			- _theMainDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "diag_definicao_semana_04_05";
+				- _id = GUID f53d507c-79b1-4f7f-850a-0c96a124e9bd;
+			}
+			- weakCGTime = 4.8.2016::17:42:52;
+			- strongCGTime = 4.8.2016::17:41:20;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 82bdbb67-6156-4f36-8fde-ac0769bfa6a1;
+			- _myState = 8192;
+			- _name = "fsl_smc_hal";
+			- _objectCreation = "5148392992016231707545";
+			- _umlDependencyID = "2651";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _id = GUID bdee0ab5-d5a0-4569-8f02-ac8f107b96c3;
+				}
+			}
+			- _theMainDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "diag_definicao_semana_04_05";
+				- _id = GUID f53d507c-79b1-4f7f-850a-0c96a124e9bd;
+			}
+			- weakCGTime = 4.8.2016::17:42:55;
+			- strongCGTime = 4.8.2016::17:41:58;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+		{ IClass 
+			- _id = GUID 1ea38ca5-80a9-4f47-80f1-d13c37181ab9;
+			- _myState = 8192;
+			- _name = "fsl_port_hal";
+			- _objectCreation = "5148412992016231707345";
+			- _umlDependencyID = "2772";
+			- Stereotypes = { IRPYRawContainer 
+				- size = 1;
+				- value = 
+				{ IHandle 
+					- _m2Class = "IStereotype";
+					- _id = GUID bdee0ab5-d5a0-4569-8f02-ac8f107b96c3;
+				}
+			}
+			- _theMainDiagram = { IHandle 
+				- _m2Class = "IDiagram";
+				- _filename = "";
+				- _subsystem = "";
+				- _class = "";
+				- _name = "diag_definicao_semana_04_05";
+				- _id = GUID f53d507c-79b1-4f7f-850a-0c96a124e9bd;
+			}
+			- weakCGTime = 4.8.2016::17:42:54;
+			- strongCGTime = 4.8.2016::17:41:52;
+			- _multiplicity = "";
+			- _itsStateChart = { IHandle 
+				- _m2Class = "";
+			}
+			- _classModifier = Unspecified;
+		}
+	}
+	- Events = { IRPYRawContainer 
+		- size = 1;
+		- value = 
+		{ IEvent 
+			- _id = GUID 5c5570d9-ea15-49f5-8260-4d76de352f06;
+			- _myState = 8192;
+			- _name = "timeout_500ms";
+			- _objectCreation = "5148432992016231707145";
+			- _umlDependencyID = "2738";
+			- _virtual = 0;
+			- Args = { IRPYRawContainer 
+				- size = 0;
+			}
+		}
+	}
+	- _configurationRelatedTime = 4.8.2016::15:39:19;
+}
+
