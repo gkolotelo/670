@@ -4,8 +4,10 @@
 /*                   interfaces for handling the LCD hardware from   */
 /*                   the hardware kit                                */
 /* Author name:      dloubach                                        */
+/* Modified by:      Guilherme Kairalla Kolotelo                     */
+/*                   Kaique Arce de Almeida Camargo                  */
 /* Creation date:    16out2015                                       */
-/* Revision date:    25fev2016                                       */
+/* Revision date:    06may2016                                       */
 /* ***************************************************************** */
 
 #ifndef SOURCES_LCD_H_
