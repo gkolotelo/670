@@ -25,7 +25,7 @@ int peripheralInit()
 	display_7segments_initDisplays();
 	lcd_initLcd();
 }
-
+int pos = 0;
 int main(void)
 {
     boardInit();
@@ -33,8 +33,7 @@ int main(void)
     char hello[12] = "Hello World!";
     lcd_writeString(hello);
     for (;;) {
-    	interpreter_readCommand();
-
+    	//interpreter_readCommand();
 
 
     }

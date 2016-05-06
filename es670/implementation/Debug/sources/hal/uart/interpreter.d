@@ -14,7 +14,8 @@ sources/hal/uart/interpreter.o: ../sources/hal/uart/interpreter.c \
  ../SDK/platform/devices/MKL25Z4/include/MKL25Z4_extension.h \
  ../SDK/platform/devices/MKL25Z4/include/MKL25Z4.h \
  ../SDK/platform/devices/MKL25Z4/include/fsl_bitaccess.h \
- ../SDK/platform/devices/MKL25Z4/include/MKL25Z4_features.h
+ ../SDK/platform/devices/MKL25Z4/include/MKL25Z4_features.h \
+ ../Sources/hal/uart/debugUart.h
 
 ../sources/hal/uart/interpreter.h:
 
@@ -49,3 +50,5 @@ C:\Freescale\KSDK_1.2.0\platform\osa\inc/fsl_os_abstraction_bm.h:
 ../SDK/platform/devices/MKL25Z4/include/fsl_bitaccess.h:
 
 ../SDK/platform/devices/MKL25Z4/include/MKL25Z4_features.h:
+
+../Sources/hal/uart/debugUart.h:

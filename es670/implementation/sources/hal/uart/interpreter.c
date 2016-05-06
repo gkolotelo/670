@@ -17,6 +17,7 @@
 #include "hal/ledswi/ledswi.h"
 #include "fsl_debug_console.h"
 #include "fsl_device_registers.h"
+#include "hal/uart/debugUart.h"
 
 
 /**
@@ -162,7 +163,7 @@ char buzzerCommand()
 
 void interpreter_readCommand()
 {
-	if(UART0_BRD_S1_RDRF(UART0) == 0) return 0;
+	if(UART0_BRD_S1_RDRF(UART0) == 0) return;
 	uint8_t uiReceiveBuff, uiRetVal;
 	uiReceiveBuff = GETCHAR();
 	PUTCHAR(uiReceiveBuff);
