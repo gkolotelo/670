@@ -1,42 +1,49 @@
-04, 30, 2016 (20:27:40): Starting Pre-Save actions
+05, 06, 2016 (11:35:21): Starting Pre-Save actions
 
-04, 30, 2016 (20:27:40): Starting Dialogs Check/Save
-04, 30, 2016 (20:27:40): Finished Dialogs Check/Save
-04, 30, 2016 (20:27:40): Starting Controlled Files Resolution
-04, 30, 2016 (20:27:40): Finished Controlled Files Resolution
-04, 30, 2016 (20:27:40): Finished Pre-Save actions
+05, 06, 2016 (11:35:21): Starting Dialogs Check/Save
+05, 06, 2016 (11:35:21): Finished Dialogs Check/Save
+05, 06, 2016 (11:35:21): Starting Controlled Files Resolution
+05, 06, 2016 (11:35:21): Finished Controlled Files Resolution
+05, 06, 2016 (11:35:21): Finished Pre-Save actions
 
-04, 30, 2016 (20:27:40): Creating E:\ES670A\es670\model\Projeto_ES670.rpy
-04, 30, 2016 (20:27:40): 
-Started writing E:\ES670A\es670\model\Projeto_ES670.rpy on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): Creating \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670.rpy
+05, 06, 2016 (11:35:21): 
+Started writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670.rpy on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:40): version 8.5.2
-04, 30, 2016 (20:27:40): 
-Started writing E:\ES670A\es670\model\Projeto_ES670_rpy\filesTable.dat on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): version 8.5.2
+05, 06, 2016 (11:35:21): 
+Started writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\filesTable.dat on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:40): Finished writing E:\ES670A\es670\model\Projeto_ES670_rpy\filesTable.dat on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): Finished writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\filesTable.dat on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:40): Creating E:\ES670A\es670\model\Projeto_ES670_rpy\buzzer.sbs
-04, 30, 2016 (20:27:40): 
-Started writing E:\ES670A\es670\model\Projeto_ES670_rpy\buzzer.sbs on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): Creating \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\_Projeto_Pratico.sbs
+05, 06, 2016 (11:35:21): 
+Started writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\_Projeto_Pratico.sbs on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:40): version 8.5.2
-04, 30, 2016 (20:27:40): Finished writing E:\ES670A\es670\model\Projeto_ES670_rpy\buzzer.sbs on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): version 8.5.2
+05, 06, 2016 (11:35:21): Finished writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\_Projeto_Pratico.sbs on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:40): Creating E:\ES670A\es670\model\Projeto_ES670_rpy\display_7segments.sbs
-04, 30, 2016 (20:27:40): 
-Started writing E:\ES670A\es670\model\Projeto_ES670_rpy\display_7segments.sbs on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): Creating \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\main.sbs
+05, 06, 2016 (11:35:21): 
+Started writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\main.sbs on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:40): version 8.5.2
-04, 30, 2016 (20:27:40): Finished writing E:\ES670A\es670\model\Projeto_ES670_rpy\display_7segments.sbs on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): version 8.5.2
+05, 06, 2016 (11:35:21): Finished writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\main.sbs on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:40): Creating E:\ES670A\es670\model\Projeto_ES670_rpy\uart.sbs
-04, 30, 2016 (20:27:40): 
-Started writing E:\ES670A\es670\model\Projeto_ES670_rpy\uart.sbs on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): Creating \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\hal.sbs
+05, 06, 2016 (11:35:21): 
+Started writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\hal.sbs on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:40): version 8.5.2
-04, 30, 2016 (20:27:40): Finished writing E:\ES670A\es670\model\Projeto_ES670_rpy\uart.sbs on Saturday, April 30, 2016 (20:27:40)
+05, 06, 2016 (11:35:21): version 8.5.2
+05, 06, 2016 (11:35:21): Finished writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\hal.sbs on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:41): Finished writing E:\ES670A\es670\model\Projeto_ES670.rpy on Saturday, April 30, 2016 (20:27:41)
+05, 06, 2016 (11:35:21): Creating \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\lcd.sbs
+05, 06, 2016 (11:35:21): 
+Started writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\lcd.sbs on Friday, May 06, 2016 (11:35:21)
 
-04, 30, 2016 (20:27:41): End Log
+05, 06, 2016 (11:35:21): version 8.5.2
+05, 06, 2016 (11:35:21): Finished writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670_rpy\lcd.sbs on Friday, May 06, 2016 (11:35:21)
+
+05, 06, 2016 (11:35:21): Finished writing \\vmware-host\Shared Folders\Documents\University\Current Semester\ES670\670\es670\model\Projeto_ES670.rpy on Friday, May 06, 2016 (11:35:21)
+
+05, 06, 2016 (11:35:21): End Log

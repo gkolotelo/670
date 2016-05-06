@@ -3,8 +3,8 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 	- _id = GUID 20246198-4c47-4bfe-9397-a7aa14ffd20f;
 	- _myState = 8192;
 	- _name = "_Projeto_Pratico";
-	- _objectCreation = "15255930172016205419415";
-	- _umlDependencyID = "3188";
+	- _objectCreation = "21198466352016112275521";
+	- _umlDependencyID = "3190";
 	- Annotations = { IRPYRawContainer 
 		- size = 8;
 		- value = 
@@ -12,8 +12,8 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 			- _id = GUID 28f0689a-ecff-4bb0-941d-4a8badc4b580;
 			- _myState = 2048;
 			- _name = "comment_0";
-			- _objectCreation = "15256130172016205417415";
-			- _umlDependencyID = "2426";
+			- _objectCreation = "21198486352016112273521";
+			- _umlDependencyID = "2437";
 			- _description = { IDescription 
 				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
@@ -29,8 +29,8 @@ Diagrama de Requisitos de Sistema\\par
 			- _id = GUID dec1f94f-1152-46e1-904d-55660096766c;
 			- _myState = 2048;
 			- _name = "comment_14";
-			- _objectCreation = "15256330172016205415415";
-			- _umlDependencyID = "2479";
+			- _objectCreation = "21198506352016112271521";
+			- _umlDependencyID = "2481";
 			- _description = { IDescription 
 				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\b\\fs24 ES670 -  Projeto de Sistemas Embarcados\\par
@@ -47,8 +47,8 @@ Diagrama de Defini\\'e7\\'e3o de Blocos\\par
 			- _id = GUID ff49df2e-66b1-405c-9a1d-efad749c7d2c;
 			- _myState = 2048;
 			- _name = "comment_21";
-			- _objectCreation = "15256530172016205413415";
-			- _umlDependencyID = "2477";
+			- _objectCreation = "21198526352016112269521";
+			- _umlDependencyID = "2488";
 			- _description = { IDescription 
 				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
@@ -64,8 +64,8 @@ Diagrama de Pacotes\\par
 			- _id = GUID 5afd59e4-c604-4c4e-887e-b0d9ede1f18d;
 			- _myState = 2048;
 			- _name = "comment_23";
-			- _objectCreation = "15256730172016205411415";
-			- _umlDependencyID = "2479";
+			- _objectCreation = "21198546352016112267521";
+			- _umlDependencyID = "2490";
 			- _description = { IDescription 
 				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
@@ -82,8 +82,8 @@ Diagrama de Sequ\\'eancia - Interpretador de Comandos\\par
 			- _id = GUID 86830b65-a694-45fb-86b8-7d602387707b;
 			- _myState = 2048;
 			- _name = "comment_25";
-			- _objectCreation = "15256930172016205409415";
-			- _umlDependencyID = "2490";
+			- _objectCreation = "21198566352016112265521";
+			- _umlDependencyID = "2492";
 			- _description = { IDescription 
 				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
@@ -99,8 +99,8 @@ Diagrama de Defini\\'e7\\'e3o de Blocos - \\b <<Subsystem>> LCD\\par
 			- _id = GUID f332d7c4-9288-4bf0-afd9-03ed3f251a6b;
 			- _myState = 2048;
 			- _name = "comment_27";
-			- _objectCreation = "15257130172016205407415";
-			- _umlDependencyID = "2483";
+			- _objectCreation = "21198586352016112263521";
+			- _umlDependencyID = "2494";
 			- _description = { IDescription 
 				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\b\\fs20 ES670 -  Projeto de Sistemas Embarcados\\par
@@ -116,8 +116,8 @@ Bloco do ADC para ser integrado ao resto do sistema\\par
 			- _id = GUID 1c6aff64-4936-4d1f-a7e1-13ea01f4e0ae;
 			- _myState = 2048;
 			- _name = "comment_30";
-			- _objectCreation = "15257330172016205405415";
-			- _umlDependencyID = "2477";
+			- _objectCreation = "21198606352016112261521";
+			- _umlDependencyID = "2479";
 			- _description = { IDescription 
 				- _text = "#define D7S_UNGATE_CLOCK
 If defined, disables PORTC clock on the MCG after setting the muxes to preserve power. May interfere with third-party code.
@@ -129,8 +129,8 @@ If defined, disables PORTC clock on the MCG after setting the muxes to preserve 
 			- _id = GUID 3700625d-bd7c-4fde-a679-6601254455fc;
 			- _myState = 2048;
 			- _name = "comment_34";
-			- _objectCreation = "15257530172016205403415";
-			- _umlDependencyID = "2481";
+			- _objectCreation = "21198626352016112259521";
+			- _umlDependencyID = "2492";
 			- _description = { IDescription 
 				- _text = "Folder (Stereotype):
 Indicates that the dependent is a subfolder within the dependee's folder";
@@ -154,15 +154,15 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 			- _id = GUID bdee0ab5-d5a0-4569-8f02-ac8f107b96c3;
 			- _myState = 8192;
 			- _name = "File";
-			- _objectCreation = "15257730172016205401415";
-			- _umlDependencyID = "1912";
+			- _objectCreation = "21198646352016112257521";
+			- _umlDependencyID = "1923";
 			- _m2Classes = { IRPYRawContainer 
 				- size = 1;
 				- value = "Class"; 
 			}
 		}
 	}
-	- weakCGTime = 4.30.2016::23:16:7;
+	- weakCGTime = 5.6.2016::15:34:48;
 	- strongCGTime = 4.28.2016::23:28:1;
 	- _defaultComposite = GUID 0d5184b0-4db2-4cdb-a85e-27b5b9b2898f;
 	- _eventsBaseID = 29601;
@@ -173,9 +173,9 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 			- _id = GUID 0d5184b0-4db2-4cdb-a85e-27b5b9b2898f;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _objectCreation = "15257930172016205399415";
-			- _umlDependencyID = "2357";
-			- weakCGTime = 4.28.2016::23:28:16;
+			- _objectCreation = "21198666352016112255521";
+			- _umlDependencyID = "2350";
+			- weakCGTime = 4.30.2016::23:16:7;
 			- strongCGTime = 4.28.2016::23:28:1;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
@@ -188,8 +188,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 					- _id = GUID 82daef9c-aaf9-4767-8594-7fc420a4242d;
 					- _myState = 10240;
 					- _name = "object_0";
-					- _objectCreation = "15258130172016205397415";
-					- _umlDependencyID = "2311";
+					- _objectCreation = "21198686352016112253521";
+					- _umlDependencyID = "2313";
 					- _multiplicity = "1";
 					- _otherClass = { IClassifierHandle 
 						- _m2Class = "IClass";
@@ -202,8 +202,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 						- _id = GUID 05b260e0-8fae-4169-b763-e3f60058c5c2;
 						- _myState = 10240;
 						- _name = "object_0";
-						- _objectCreation = "15258330172016205395415";
-						- _umlDependencyID = "2311";
+						- _objectCreation = "21198706352016112251521";
+						- _umlDependencyID = "2304";
 						- _theMainDiagram = { IHandle 
 							- _m2Class = "IDiagram";
 							- _filename = "";
@@ -225,8 +225,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 					- _id = GUID ef1f9db5-1300-4021-9b0c-36529cb575d5;
 					- _myState = 8192;
 					- _name = "fsl_debug_console";
-					- _objectCreation = "15258530172016205393415";
-					- _umlDependencyID = "3326";
+					- _objectCreation = "21198726352016112249521";
+					- _umlDependencyID = "3328";
 					- _multiplicity = "1";
 					- _otherClass = { IClassifierHandle 
 						- _m2Class = "IClass";
@@ -239,8 +239,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 						- _id = GUID f01f54ea-7227-46a0-a90d-aaa548b43cb3;
 						- _myState = 10240;
 						- _name = "fsl_debug_console";
-						- _objectCreation = "15258730172016205391415";
-						- _umlDependencyID = "3326";
+						- _objectCreation = "21198746352016112247521";
+						- _umlDependencyID = "3328";
 						- Stereotypes = { IRPYRawContainer 
 							- size = 1;
 							- value = 
@@ -273,8 +273,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 			- _id = GUID d32248dd-74d9-479b-b8a9-cc8ac7ccc303;
 			- _myState = 8192;
 			- _name = "MKL25Z4";
-			- _objectCreation = "15258930172016205389415";
-			- _umlDependencyID = "2019";
+			- _objectCreation = "21198766352016112245521";
+			- _umlDependencyID = "2012";
 			- Stereotypes = { IRPYRawContainer 
 				- size = 1;
 				- value = 
@@ -295,8 +295,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 			- _id = GUID 08c1aede-ca9f-4ad1-a5c3-258b424cd52a;
 			- _myState = 8192;
 			- _name = "fsl_clock_manager";
-			- _objectCreation = "15259130172016205387415";
-			- _umlDependencyID = "3307";
+			- _objectCreation = "21198786352016112243521";
+			- _umlDependencyID = "3309";
 			- Stereotypes = { IRPYRawContainer 
 				- size = 1;
 				- value = 
@@ -325,8 +325,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 			- _id = GUID 82bdbb67-6156-4f36-8fde-ac0769bfa6a1;
 			- _myState = 8192;
 			- _name = "fsl_smc_hal";
-			- _objectCreation = "15259330172016205385415";
-			- _umlDependencyID = "2684";
+			- _objectCreation = "21198806352016112241521";
+			- _umlDependencyID = "2677";
 			- Stereotypes = { IRPYRawContainer 
 				- size = 1;
 				- value = 
@@ -355,8 +355,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 			- _id = GUID 1ea38ca5-80a9-4f47-80f1-d13c37181ab9;
 			- _myState = 8192;
 			- _name = "fsl_port_hal";
-			- _objectCreation = "15259530172016205383415";
-			- _umlDependencyID = "2814";
+			- _objectCreation = "21198826352016112239521";
+			- _umlDependencyID = "2816";
 			- Stereotypes = { IRPYRawContainer 
 				- size = 1;
 				- value = 
@@ -389,8 +389,8 @@ Indicates that the dependent is a subfolder within the dependee's folder";
 			- _id = GUID 5c5570d9-ea15-49f5-8260-4d76de352f06;
 			- _myState = 8192;
 			- _name = "timeout_500ms";
-			- _objectCreation = "15259730172016205381415";
-			- _umlDependencyID = "2780";
+			- _objectCreation = "21198846352016112237521";
+			- _umlDependencyID = "2782";
 			- _virtual = 0;
 			- Args = { IRPYRawContainer 
 				- size = 0;
