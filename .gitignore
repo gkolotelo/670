@@ -4,3 +4,4 @@ putty.exe
 RemoteSystemsTempFiles 
 writeout.txt 
 .metadata
+.DS_store
