@@ -14,11 +14,6 @@
 #include "../es670_peripheral_board.h"
 #include "../util/util.h"
 
-/* system includes */
-//#include "fsl_clock_manager.h"
-//#include "fsl_port_hal.h"
-//#include "fsl_gpio_hal.h"
-
 /* line and columns */
 #define LINE0        0U
 #define COLUMN0      0U
@@ -38,21 +33,10 @@ void lcd_initLcd(void)
     /* pins configured as outputs */
 
     /* un-gate port clock*/
-    //CLOCK_SYS_EnablePortClock(PORTC_IDX);
 	SIM_SCGC5 |= (SIM_SCGC5_PORTC_MASK);
 
 
     /* set pin as gpio */
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_RS_PIN, LCD_RS_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_ENABLE_PIN, LCD_ENABLE_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_DATA_DB0_PIN, LCD_DATA_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_DATA_DB1_PIN, LCD_DATA_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_DATA_DB2_PIN, LCD_DATA_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_DATA_DB3_PIN, LCD_DATA_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_DATA_DB4_PIN, LCD_DATA_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_DATA_DB5_PIN, LCD_DATA_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_DATA_DB6_PIN, LCD_DATA_ALT);
-    //PORT_HAL_SetMuxMode(LCD_PORT_BASE_PNT, LCD_DATA_DB7_PIN, LCD_DATA_ALT);
     PORTC_PCR0 = PORT_PCR_MUX(LCD_DATA_ALT);
     PORTC_PCR1 = PORT_PCR_MUX(LCD_DATA_ALT);
     PORTC_PCR2 = PORT_PCR_MUX(LCD_DATA_ALT);
@@ -65,16 +49,6 @@ void lcd_initLcd(void)
     PORTC_PCR9 = PORT_PCR_MUX(LCD_ENABLE_ALT);
 
     /* set pin as digital output */
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_RS_PIN, LCD_RS_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_ENABLE_PIN, LCD_ENABLE_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_DATA_DB0_PIN, LCD_DATA_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_DATA_DB1_PIN, LCD_DATA_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_DATA_DB2_PIN, LCD_DATA_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_DATA_DB3_PIN, LCD_DATA_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_DATA_DB4_PIN, LCD_DATA_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_DATA_DB5_PIN, LCD_DATA_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_DATA_DB6_PIN, LCD_DATA_DIR);
-    //GPIO_HAL_SetPinDir(LCD_GPIO_BASE_PNT, LCD_DATA_DB7_PIN, LCD_DATA_DIR);
     GPIOC_PDDR |= GPIO_PDDR_PDD(LCD_RS_DIR);
     GPIOC_PDDR |= GPIO_PDDR_PDD(LCD_ENABLE_DIR);
     GPIOC_PDDR |= GPIO_PDDR_PDD(LCD_DATA_DIR);
@@ -111,40 +85,20 @@ void lcd_write2Lcd(unsigned char ucBuffer,  unsigned char cDataType)
     /* writing data or command */
     if(LCD_RS_CMD == cDataType)
         /* will send a command */
-        //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_RS_PIN, LCD_RS_CMD);
         GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_RS_PIN))) | (LCD_RS_CMD << LCD_RS_PIN));
 
     else
         /* will send data */
-        //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_RS_PIN, LCD_RS_DATA);
         GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_RS_PIN))) | (LCD_RS_DATA << LCD_RS_PIN));
 
     /* write in the LCD bus */
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_DATA_DB0_PIN, ((ucBuffer & (1u << 0u)) >> 0u));
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_DATA_DB1_PIN, ((ucBuffer & (1u << 1u)) >> 1u));
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_DATA_DB2_PIN, ((ucBuffer & (1u << 2u)) >> 2u));
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_DATA_DB3_PIN, ((ucBuffer & (1u << 3u)) >> 3u));
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_DATA_DB4_PIN, ((ucBuffer & (1u << 4u)) >> 4u));
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_DATA_DB5_PIN, ((ucBuffer & (1u << 5u)) >> 5u));
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_DATA_DB6_PIN, ((ucBuffer & (1u << 6u)) >> 6u));
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_DATA_DB7_PIN, ((ucBuffer & (1u << 7u)) >> 7u));
-    //GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_DATA_DB0_PIN))) | ((ucBuffer & (1u << 0u)) << LCD_DATA_DB0_PIN));
-    //GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_DATA_DB1_PIN))) | ((ucBuffer & (1u << 1u)) << LCD_DATA_DB1_PIN));
-    //GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_DATA_DB2_PIN))) | ((ucBuffer & (1u << 2u)) << LCD_DATA_DB2_PIN));
-    //GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_DATA_DB3_PIN))) | ((ucBuffer & (1u << 3u)) << LCD_DATA_DB3_PIN));
-    //GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_DATA_DB4_PIN))) | ((ucBuffer & (1u << 4u)) << LCD_DATA_DB4_PIN));
-    //GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_DATA_DB5_PIN))) | ((ucBuffer & (1u << 5u)) << LCD_DATA_DB5_PIN));
-    //GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_DATA_DB6_PIN))) | ((ucBuffer & (1u << 6u)) << LCD_DATA_DB6_PIN));
-    //GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_DATA_DB7_PIN))) | ((ucBuffer & (1u << 7u)) << LCD_DATA_DB7_PIN));
     GPIOC_PDOR = ((GPIOC_PDOR & (~(0xFF << LCD_DATA_DB0_PIN))) | (ucBuffer << LCD_DATA_DB0_PIN));
 
 
     /* enable, delay, disable LCD */
     /* this generates a pulse in the enable pin */
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_ENABLE_PIN, LCD_ENABLED);
     GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_ENABLE_PIN))) | (LCD_ENABLED << LCD_ENABLE_PIN));
     util_genDelay1ms();
-    //GPIO_HAL_WritePinOutput(LCD_GPIO_BASE_PNT, LCD_ENABLE_PIN, LCD_DISABLED);
     GPIOC_PDOR = ((GPIOC_PDOR & (~(1 << LCD_ENABLE_PIN))) | (LCD_DISABLED << LCD_ENABLE_PIN));
     util_genDelay1ms();
     util_genDelay1ms();

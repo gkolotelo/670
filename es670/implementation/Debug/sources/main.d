@@ -16,7 +16,7 @@ sources/main.o: ../sources/main.c \
  ../sources/hal/util/util.h ../sources/hal/ledswi/ledswi.h \
  ../sources/hal/display_7segments/display_7segments.h \
  ../sources/hal/uart/debugUart.h ../sources/hal/uart/interpreter.h \
- ../sources/hal/lcd/lcd.h
+ ../sources/hal/lcd/lcd.h ../sources/hal/pwm/pwm.h
 
 C:\Freescale\KSDK_1.2.0\platform\utilities\inc/fsl_debug_console.h:
 
@@ -59,3 +59,5 @@ C:\Freescale\KSDK_1.2.0\platform\osa\inc/fsl_os_abstraction_bm.h:
 ../sources/hal/uart/interpreter.h:
 
 ../sources/hal/lcd/lcd.h:
+
+../sources/hal/pwm/pwm.h:

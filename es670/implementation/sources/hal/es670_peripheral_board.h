@@ -88,14 +88,10 @@
 #define LCD_GPIO_BASE_PNT           PTC                                     /* peripheral gpio base pointer */
 
 #define LCD_RS_PIN                  8U                                      /* register selector */
-//#define LCD_RS_DIR                  kGpioDigitalOutput
-//#define LCD_RS_ALT                  kPortMuxAsGpio
 #define LCD_RS_DIR                  0x01 << 8
 #define LCD_RS_ALT                  0x01
 
 #define LCD_ENABLE_PIN              9U                                      /* enable pin */
-//#define LCD_ENABLE_DIR              kGpioDigitalOutput
-//#define LCD_ENABLE_ALT              kPortMuxAsGpio
 #define LCD_ENABLE_DIR              0x01 << 9
 #define LCD_ENABLE_ALT              0x01
 
@@ -108,8 +104,6 @@
 #define LCD_ENABLED                 1U
 #define LCD_DISABLED                0U
 
-//#define LCD_DATA_DIR                kGpioDigitalOutput                      /* LCD data pins */
-//#define LCD_DATA_ALT                kPortMuxAsGpio
 #define LCD_DATA_DIR_IO             0x01                      				/* LCD data pins */
 #define LCD_DATA_DIR_MSK            0xFF                     				/* LCD data pins */
 #define LCD_DATA_DIR 				LCD_DATA_DIR_IO & LCD_DATA_DIR_MSK

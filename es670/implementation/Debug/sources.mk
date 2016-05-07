@@ -27,6 +27,7 @@ SUBDIRS := \
 sources \
 sources/hal/util \
 sources/hal/uart \
+sources/hal/pwm \
 sources/hal/mcg \
 sources/hal/ledswi \
 sources/hal/lcd \

@@ -11,6 +11,7 @@
 #include "hal/uart/debugUart.h"
 #include "hal/uart/interpreter.h"
 #include "hal/lcd/lcd.h"
+#include "hal/pwm/pwm.h"
 
 int boardInit()
 {
@@ -30,10 +31,18 @@ int main(void)
 {
     boardInit();
     peripheralInit();
-    char hello[12] = "Hello World!";
+    lcd_setCursor(0,1);
+    char hello[16] = "KAAC - 140721  ";
     lcd_writeString(hello);
+    lcd_setCursor(1,2);
+    char hello1[16] = "GKK - 135964  ";
+    lcd_writeString(hello1);
+
+    pwm_initPWM(TPM0, 1);
+
+
     for (;;) {
-    	//interpreter_readCommand();
+    	interpreter_readCommand();
 
 
     }

@@ -10,6 +10,7 @@ RM := rm -rf
 -include sources.mk
 -include sources/hal/util/subdir.mk
 -include sources/hal/uart/subdir.mk
+-include sources/hal/pwm/subdir.mk
 -include sources/hal/mcg/subdir.mk
 -include sources/hal/ledswi/subdir.mk
 -include sources/hal/lcd/subdir.mk
