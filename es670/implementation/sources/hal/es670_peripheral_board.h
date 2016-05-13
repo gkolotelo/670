@@ -3,8 +3,10 @@
 /* File description: Header file containing the peripherals mapping  */
 /*                     of the peripheral board for the ES670 hardware*/
 /* Author name:      dloubach                                        */
+/* Modified by:      Guilherme Kairalla Kolotelo                     */
+/*                   Kaique Arce de Almeida Camargo                  */
 /* Creation date:    16out2015                                       */
-/* Revision date:    25fev2016                                       */
+/* Revision date:    06may2016                                       */
 /* ***************************************************************** */
 
 #ifndef SOURCES_ES670_PERIPHERAL_BOARD_H_
@@ -65,17 +67,17 @@
 
 /*                 END OF LED and SWITCH definitions             */
 
-/* 					7 Segment Display definitions				 */
+/*                  7 Segment Display definitions                */
 
-#define DS1_EN_PIN						0x01u << 13u
-#define DS2_EN_PIN						0x01u << 12u
-#define DS3_EN_PIN						0x01u << 11u
-#define DS4_EN_PIN						0x01u << 10u
+#define DS1_EN_PIN                      0x01u << 13u
+#define DS2_EN_PIN                      0x01u << 12u
+#define DS3_EN_PIN                      0x01u << 11u
+#define DS4_EN_PIN                      0x01u << 10u
 
-#define D7S_DIR							0x3CFFu
-#define D7S_ALT							0x01u
+#define D7S_DIR                         0x3CFFu
+#define D7S_ALT                         0x01u
 
-/* 				END OF 7 Segment Display definitions			 */
+/*              END OF 7 Segment Display definitions             */
 
 /*                 LCD definitions                 */
 
@@ -104,19 +106,19 @@
 #define LCD_ENABLED                 1U
 #define LCD_DISABLED                0U
 
-#define LCD_DATA_DIR_IO             0x01                      				/* LCD data pins */
-#define LCD_DATA_DIR_MSK            0xFF                     				/* LCD data pins */
-#define LCD_DATA_DIR 				LCD_DATA_DIR_IO & LCD_DATA_DIR_MSK
+#define LCD_DATA_DIR_IO             0x01                                    /* LCD data pins */
+#define LCD_DATA_DIR_MSK            0xFF                                    /* LCD data pins */
+#define LCD_DATA_DIR                LCD_DATA_DIR_IO & LCD_DATA_DIR_MSK
 #define LCD_DATA_ALT                0x01
 
-#define LCD_DATA_DB0_PIN            0U
-#define LCD_DATA_DB1_PIN            1U
-#define LCD_DATA_DB2_PIN            2U
-#define LCD_DATA_DB3_PIN            3U
-#define LCD_DATA_DB4_PIN            4U
-#define LCD_DATA_DB5_PIN            5U
-#define LCD_DATA_DB6_PIN            6U
-#define LCD_DATA_DB7_PIN            7U
+#define LCD_DATA_PIN0               0U
+#define LCD_DATA_PIN1               1U
+#define LCD_DATA_PIN2               2U
+#define LCD_DATA_PIN3               3U
+#define LCD_DATA_PIN4               4U
+#define LCD_DATA_PIN5               5U
+#define LCD_DATA_PIN6               6U
+#define LCD_DATA_PIN7               7U
 /*                 END OF LCD definitions                 */
 
 

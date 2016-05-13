@@ -28,8 +28,8 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 		}
 	}
 	- _name = "Projeto_ES670";
-	- _objectCreation = "21198446352016112277521";
-	- _umlDependencyID = "2682";
+	- _objectCreation = "4014586132020161129234540";
+	- _umlDependencyID = "2772";
 	- _lastID = 18;
 	- _UserColors = { IRPYRawContainer 
 		- size = 16;
@@ -264,8 +264,8 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 				}
 			}
 			- _name = "diag_requisitos";
-			- _objectCreation = "21199846352016112137521";
-			- _umlDependencyID = "3151";
+			- _objectCreation = "4014750132020161129070540";
+			- _umlDependencyID = "3232";
 			- _description = { IDescription 
 				- _textRTF = "{\\rtf1\\ansi\\ansicpg1252\\deff0\\deflang1046{\\fonttbl{\\f0\\fnil\\fcharset0 Arial;}}
 \\viewkind4\\uc1\\pard\\fs20 Diagrama de requisitos de sistema do projeto pr\\'e1tico da ES670 \\par
@@ -1489,8 +1489,8 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 				}
 			}
 			- _name = "diag_pacotes";
-			- _objectCreation = "21199866352016112135521";
-			- _umlDependencyID = "2790";
+			- _objectCreation = "4014752132020161129068540";
+			- _umlDependencyID = "2880";
 			- _lastModifiedTime = "4.30.2016::23:21:27";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID 84c7ed09-6a53-4e4a-925b-6e70d2f9ea4a;
@@ -4577,9 +4577,9 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 				}
 			}
 			- _name = "diag_definicao_semana_04_05";
-			- _objectCreation = "21199886352016112133521";
-			- _umlDependencyID = "4084";
-			- _lastModifiedTime = "5.6.2016::15:35:15";
+			- _objectCreation = "4014754132020161129066540";
+			- _umlDependencyID = "4174";
+			- _lastModifiedTime = "5.13.2016::14:20:39";
 			- _graphicChart = { CGIClassChart 
 				- _id = GUID 338e6526-0699-499c-b6b4-93ea64c72097;
 				- m_type = 0;
@@ -4834,7 +4834,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2152;
-					- m_transform = 0.164306 0 0 0.115865 457.672 540.88 ;
+					- m_transform = 0.164306 0 0 0.103387 457.672 456.985 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -4853,7 +4853,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- frameset = "<frameset rows=25%,75%>
+					- frameset = "<frameset rows=11%,89%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
 					- Attrs = { IRPYRawContainer 
@@ -4958,7 +4958,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2152;
-					- m_transform = 0.324835 0 0 0.139037 457.349 666.256 ;
+					- m_transform = 0.324835 0 0 0.133689 456.349 566.015 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -4977,7 +4977,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- frameset = "<frameset rows=11%,89%>
+					- frameset = "<frameset rows=9%,91%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
 					- Attrs = { IRPYRawContainer 
@@ -5107,7 +5107,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.444323 0 0 0.0775401 704.112 588.49 ;
+					- m_transform = 0.444323 0 0 0.0677362 705.112 508.715 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -5126,7 +5126,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- frameset = "<frameset rows=57%,43%>
+					- frameset = "<frameset rows=27%,73%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
 					- Attrs = { IRPYRawContainer 
@@ -5230,12 +5230,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 438 694  438 810  ;
+					- m_arrow = 2 438 606  438 715  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 32 1322 ;
-					- m_TargetPort = 2 1034 ;
+					- m_SourcePort = 32 1441 ;
+					- m_TargetPort = 2 1114 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "";
 					}
@@ -5432,8 +5432,8 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 544 450 ;
-					- m_TargetPort = 304 644 ;
+					- m_SourcePort = 544 435 ;
+					- m_TargetPort = 304 602 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "";
 					}
@@ -5497,12 +5497,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- m_bgColor = 0;
 							- m_bgFlag = 0;
 						}
-						- m_position = 4 -6 -9  18 -9  18 13  -6 13  ;
+						- m_position = 4 -6 -9  14 -9  14 9  -6 9  ;
 						- m_nIdent = 5;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 1177 589 ;
-						- m_nHorizontalSpacing = -20;
-						- m_nVerticalSpacing = -1;
+						- m_transform = 1 0 0 1 1176 484 ;
+						- m_nHorizontalSpacing = -5;
+						- m_nVerticalSpacing = -2;
 						- m_nOrientationCtrlPt = 4;
 					}
 					- m_sourceQualifier = { CGIText 
@@ -5630,12 +5630,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nVerticalSpacing = -27;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 1 1065 765  ;
+					- m_arrow = 1 1065 653  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 522 710 ;
-					- m_TargetPort = 812 961 ;
+					- m_SourcePort = 522 651 ;
+					- m_TargetPort = 810 964 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -5826,20 +5826,19 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- m_bgColor = 0;
 							- m_bgFlag = 0;
 						}
-						- m_position = 4 -6 -9  78 -9  78 13  -6 13  ;
+						- m_position = 4 -6 -9  63 -9  63 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 1042 532 ;
-						- m_nHorizontalSpacing = 36;
-						- m_nVerticalSpacing = -24;
+						- m_transform = 1 0 0 1 1094 468 ;
+						- m_nHorizontalSpacing = -26;
+						- m_nVerticalSpacing = -27;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 2 931 543  1196 543  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 511 342 ;
-					- m_TargetPort = 848 1202 ;
+					- m_SourcePort = 1031 506 ;
+					- m_TargetPort = 436 1202 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -5943,8 +5942,8 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1000 1054 ;
-					- m_TargetPort = 196 961 ;
+					- m_SourcePort = 1000 1190 ;
+					- m_TargetPort = 196 1052 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -6037,20 +6036,20 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- m_bgColor = 0;
 							- m_bgFlag = 0;
 						}
-						- m_position = 4 -6 -9  78 -9  78 13  -6 13  ;
+						- m_position = 4 -6 -9  63 -9  63 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 1044 572 ;
-						- m_nHorizontalSpacing = -24;
-						- m_nVerticalSpacing = -25;
+						- m_transform = 1 0 0 1 1061 520 ;
+						- m_nHorizontalSpacing = -28;
+						- m_nVerticalSpacing = -4;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 1 1042 565  ;
+					- m_arrow = 1 1043 509  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 20 439 ;
-					- m_TargetPort = 760 355 ;
+					- m_SourcePort = 20 656 ;
+					- m_TargetPort = 760 359 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -6124,7 +6123,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2152;
-					- m_transform = 0.207743 0 0 0.116756 457.584 832.588 ;
+					- m_transform = 0.207743 0 0 0.118539 456.584 724.002 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -6143,7 +6142,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- frameset = "<frameset rows=12%,88%>
+					- frameset = "<frameset rows=11%,89%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
 					- Attrs = { IRPYRawContainer 
@@ -6283,12 +6282,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nVerticalSpacing = -26;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 1 1065 947  ;
+					- m_arrow = 1 1065 841  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1061 980 ;
-					- m_TargetPort = 812 909 ;
+					- m_SourcePort = 1061 987 ;
+					- m_TargetPort = 810 905 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -6386,12 +6385,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 438 694  438 945  ;
+					- m_arrow = 2 438 606  438 839  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 20 1322 ;
-					- m_TargetPort = -3 963 ;
+					- m_SourcePort = 20 1441 ;
+					- m_TargetPort = -3 970 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "";
 					}
@@ -6560,7 +6559,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2152;
-					- m_transform = 0.741266 0 0 0.172906 458.518 1232.11 ;
+					- m_transform = 0.741266 0 0 0.172906 455.518 1193.11 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -6786,12 +6785,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 438 694  438 1464  ;
+					- m_arrow = 2 438 606  438 1369  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 45 1322 ;
-					- m_TargetPort = 3 1343 ;
+					- m_SourcePort = 45 1441 ;
+					- m_TargetPort = 3 1017 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "";
 					}
@@ -6983,16 +6982,16 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_position = 4 -6 -9  63 -9  63 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 1078 1267 ;
-						- m_nHorizontalSpacing = 188;
-						- m_nVerticalSpacing = 243;
+						- m_transform = 1 0 0 1 1075 1331 ;
+						- m_nHorizontalSpacing = 53;
+						- m_nVerticalSpacing = 319;
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 818 323 ;
-					- m_TargetPort = 812 987 ;
+					- m_SourcePort = 822 323 ;
+					- m_TargetPort = 810 993 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -7066,7 +7065,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2088;
-					- m_transform = 0.253069 0 0 0.200535 457.494 285.024 ;
+					- m_transform = 0.268178 0 0 0.122104 457.464 310.828 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -7085,11 +7084,11 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- frameset = "<frameset rows=82%,18%>
+					- frameset = "<frameset rows=66%,34%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
 					- Attrs = { IRPYRawContainer 
-						- size = 8;
+						- size = 3;
 						- value = 
 						{ IHandle 
 							- _m2Class = "IAttribute";
@@ -7106,46 +7105,6 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- _class = "mcg";
 							- _name = "RTC_XTAL_FREQ";
 							- _id = GUID 07770090-e871-4c14-8f9c-17999343a537;
-						}
-						{ IHandle 
-							- _m2Class = "IAttribute";
-							- _filename = "mcg.sbs";
-							- _subsystem = "sources::hal::mcg";
-							- _class = "mcg";
-							- _name = "MCG_HGO0";
-							- _id = GUID ee3fdb55-c665-41d3-9b10-642bb7400144;
-						}
-						{ IHandle 
-							- _m2Class = "IAttribute";
-							- _filename = "mcg.sbs";
-							- _subsystem = "sources::hal::mcg";
-							- _class = "mcg";
-							- _name = "MCG_RANGE0";
-							- _id = GUID 112bd9c6-bda0-456c-8199-95a238650349;
-						}
-						{ IHandle 
-							- _m2Class = "IAttribute";
-							- _filename = "mcg.sbs";
-							- _subsystem = "sources::hal::mcg";
-							- _class = "mcg";
-							- _name = "MCG_EREFS0";
-							- _id = GUID e85c62bb-0312-46ce-b6ae-ca2522d6e6bb;
-						}
-						{ IHandle 
-							- _m2Class = "IAttribute";
-							- _filename = "mcg.sbs";
-							- _subsystem = "sources::hal::mcg";
-							- _class = "mcg";
-							- _name = "CLOCK_VLPR";
-							- _id = GUID a9b55dd3-a241-4c19-85c8-9af26671eba2;
-						}
-						{ IHandle 
-							- _m2Class = "IAttribute";
-							- _filename = "mcg.sbs";
-							- _subsystem = "sources::hal::mcg";
-							- _class = "mcg";
-							- _name = "CLOCK_RUN";
-							- _id = GUID f0a81a16-15e8-483f-8edd-48bebe1d28d3;
 						}
 						{ IHandle 
 							- _m2Class = "IAttribute";
@@ -7263,12 +7222,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 437 652  437 535  ;
+					- m_arrow = 2 437 569  437 467  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 14 959 ;
-					- m_TargetPort = 26 1247 ;
+					- m_SourcePort = 14 1083 ;
+					- m_TargetPort = 28 1279 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "";
 					}
@@ -7768,7 +7727,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 259 868 ;
+					- m_SourcePort = 259 1213 ;
 					- m_TargetPort = 496 945 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
@@ -7874,7 +7833,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 259 868 ;
+					- m_SourcePort = 259 1213 ;
 					- m_TargetPort = 267 1261 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
@@ -7980,7 +7939,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 259 868 ;
+					- m_SourcePort = 259 1213 ;
 					- m_TargetPort = 187 1162 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
@@ -8055,7 +8014,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2152;
-					- m_transform = 0.162417 0 0 0.136364 1193.68 505.137 ;
+					- m_transform = 0.162417 0 0 0.128343 1194.68 424.776 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -8187,7 +8146,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2056;
-					- m_transform = 0.722322 0 0 0.0631867 463 1483.81 ;
+					- m_transform = 0.722322 0 0 0.0631867 462 1444.81 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -8278,7 +8237,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2152;
-					- m_transform = 0.176582 0 0 0.11319 457.644 967.76 ;
+					- m_transform = 0.183192 0 0 0.163992 456.631 845.046 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -8297,7 +8256,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- m_polygon = 4 2 329  2 1451  1061 1451  1061 329  ;
 					- m_nNameFormat = 0;
 					- m_nIsNameFormat = 0;
-					- frameset = "<frameset rows=49%,51%>
+					- frameset = "<frameset rows=30%,70%>
 <frame name=AttributeListCompartment>
 <frame name=PrimitiveOperationListCompartment>";
 					- Attrs = { IRPYRawContainer 
@@ -8321,7 +8280,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						}
 					}
 					- Operations = { IRPYRawContainer 
-						- size = 2;
+						- size = 5;
 						- value = 
 						{ IHandle 
 							- _m2Class = "IPrimitiveOperation";
@@ -8338,6 +8297,30 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- _class = "interpreter";
 							- _name = "init()";
 							- _id = GUID 9816f3a8-d9de-4dcf-9a79-cb8681d2bb63;
+						}
+						{ IHandle 
+							- _m2Class = "IPrimitiveOperation";
+							- _filename = "uart.sbs";
+							- _subsystem = "sources::hal::uart";
+							- _class = "interpreter";
+							- _name = "ledCommand()";
+							- _id = GUID d1087611-e212-4c4a-b353-dd935aa3abbf;
+						}
+						{ IHandle 
+							- _m2Class = "IPrimitiveOperation";
+							- _filename = "uart.sbs";
+							- _subsystem = "sources::hal::uart";
+							- _class = "interpreter";
+							- _name = "switchCommand()";
+							- _id = GUID 8e76a68f-b44c-4977-acfe-bd617bc01e56;
+						}
+						{ IHandle 
+							- _m2Class = "IPrimitiveOperation";
+							- _filename = "uart.sbs";
+							- _subsystem = "sources::hal::uart";
+							- _class = "interpreter";
+							- _name = "buzzerrCommand()";
+							- _id = GUID 25d54c2f-8b94-4d0e-84b7-c6b3423d15a1;
 						}
 					}
 				}
@@ -8435,12 +8418,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 438 694  438 1120  ;
+					- m_arrow = 2 438 606  438 1014  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 14 1322 ;
-					- m_TargetPort = 13 1345 ;
+					- m_SourcePort = 14 1441 ;
+					- m_TargetPort = 13 1030 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "";
 					}
@@ -8632,16 +8615,16 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_position = 4 -6 -9  63 -9  63 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 1;
-						- m_transform = 1.21739 0 0 1.05556 1222.3 430.5 ;
-						- m_nHorizontalSpacing = -84;
-						- m_nVerticalSpacing = -681;
+						- m_transform = 1.21739 0 0 1.05556 1231.3 430.5 ;
+						- m_nHorizontalSpacing = -32;
+						- m_nVerticalSpacing = -575;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 2 1378 1096  1378 441  ;
+					- m_arrow = 2 1378 990  1378 441  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1021 1133 ;
+					- m_SourcePort = 1023 884 ;
 					- m_TargetPort = 1061 1326 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
@@ -8850,16 +8833,16 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_position = 4 -6 -9  63 -9  63 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 1307 430 ;
-						- m_nHorizontalSpacing = 38;
-						- m_nVerticalSpacing = -681;
+						- m_transform = 1 0 0 1 1313 428 ;
+						- m_nHorizontalSpacing = 87;
+						- m_nVerticalSpacing = -577;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 2 1378 1096  1378 399  ;
+					- m_arrow = 2 1378 990  1378 399  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1050 1133 ;
+					- m_SourcePort = 1050 884 ;
 					- m_TargetPort = 1009 1135 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
@@ -8961,12 +8944,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nVerticalSpacing = -20;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 1 656 1117  ;
+					- m_arrow = 1 669 1011  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1033 1318 ;
-					- m_TargetPort = 955 1365 ;
+					- m_SourcePort = 1034 1012 ;
+					- m_TargetPort = 1022 1358 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -9062,17 +9045,17 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_position = 4 -6 -9  63 -9  63 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 793 1066 ;
-						- m_nHorizontalSpacing = 51;
-						- m_nVerticalSpacing = -16;
+						- m_transform = 1 0 0 1 796 948 ;
+						- m_nHorizontalSpacing = 54;
+						- m_nVerticalSpacing = -23;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 1 785 1117  ;
+					- m_arrow = 1 785 1011  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1055 1318 ;
-					- m_TargetPort = 1009 1415 ;
+					- m_SourcePort = 1056 1012 ;
+					- m_TargetPort = 1012 1414 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -9173,12 +9156,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nVerticalSpacing = -26;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 1 1277 906  ;
+					- m_arrow = 1 1277 800  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 806 629 ;
-					- m_TargetPort = 513 1348 ;
+					- m_SourcePort = 806 641 ;
+					- m_TargetPort = 507 1350 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -9274,17 +9257,17 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_position = 4 -6 -9  63 -9  63 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 1253 1437 ;
-						- m_nHorizontalSpacing = 19;
-						- m_nVerticalSpacing = 329;
+						- m_transform = 1 0 0 1 1248 1424 ;
+						- m_nHorizontalSpacing = 14;
+						- m_nVerticalSpacing = 356;
 						- m_nOrientationCtrlPt = 8;
 					}
 					- m_arrow = 1 1277 1413  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1057 1046 ;
-					- m_TargetPort = 513 1451 ;
+					- m_SourcePort = 1057 1272 ;
+					- m_TargetPort = 507 1451 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -9339,7 +9322,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_nOrientationCtrlPt = 5;
 					}
 					- m_drawBehavior = 2088;
-					- m_transform = 0.395656 0 0 0.134581 456.209 1090.72 ;
+					- m_transform = 0.395656 0 0 0.143494 456.209 1038.79 ;
 					- m_bIsPreferencesInitialized = 1;
 					- m_AdditionalLabel = { CGIText 
 						- m_str = "";
@@ -9372,7 +9355,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- _filename = "lcd.sbs";
 							- _subsystem = "sources::hal::lcd";
 							- _class = "lcd";
-							- _name = "lcd_initLcd()";
+							- _name = "initLcd()";
 							- _id = GUID 332a815b-ad43-4f9c-a92b-c2993786f35f;
 						}
 						{ IHandle 
@@ -9380,7 +9363,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- _filename = "lcd.sbs";
 							- _subsystem = "sources::hal::lcd";
 							- _class = "lcd";
-							- _name = "lcd_writeData(unsigned char)";
+							- _name = "writeData(unsigned char)";
 							- _id = GUID ef85c0c5-34b9-474e-b52c-4d6bdaee510e;
 						}
 						{ IHandle 
@@ -9388,7 +9371,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- _filename = "lcd.sbs";
 							- _subsystem = "sources::hal::lcd";
 							- _class = "lcd";
-							- _name = "lcd_sendCommand(unsigned char)";
+							- _name = "sendCommand(unsigned char)";
 							- _id = GUID ef95e1ec-5fe9-4322-bdbc-216805b53043;
 						}
 						{ IHandle 
@@ -9396,7 +9379,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- _filename = "lcd.sbs";
 							- _subsystem = "sources::hal::lcd";
 							- _class = "lcd";
-							- _name = "lcd_writeString(char*)";
+							- _name = "writeString(char*)";
 							- _id = GUID 364085cd-b02a-45c5-a5cd-93a391f2da5b;
 						}
 						{ IHandle 
@@ -9404,7 +9387,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- _filename = "lcd.sbs";
 							- _subsystem = "sources::hal::lcd";
 							- _class = "lcd";
-							- _name = "lcd_setCursor(unsigned char,unsigned char)";
+							- _name = "setCursor(unsigned char,unsigned char)";
 							- _id = GUID bbc02185-1598-4d86-a989-a276135650e8;
 						}
 						{ IHandle 
@@ -9412,7 +9395,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 							- _filename = "lcd.sbs";
 							- _subsystem = "sources::hal::lcd";
 							- _class = "lcd";
-							- _name = "lcd_dummyText()";
+							- _name = "dummyText()";
 							- _id = GUID b565898b-2957-440c-acf8-485d5a39f960;
 						}
 					}
@@ -9487,12 +9470,12 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_bImplicitSetRectPoints = 0;
 						- m_nOrientationCtrlPt = 7;
 					}
-					- m_arrow = 2 438 694  438 1224  ;
+					- m_arrow = 2 438 606  438 1224  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 20 1322 ;
-					- m_TargetPort = 10 990 ;
+					- m_SourcePort = 20 1441 ;
+					- m_TargetPort = 10 1291 ;
 					- m_pInverseModelObject = { IAssociationEndHandle 
 						- _m2Class = "";
 					}
@@ -9659,17 +9642,17 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_position = 4 -6 -9  62 -9  62 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 884 1256 ;
-						- m_nHorizontalSpacing = -350;
-						- m_nVerticalSpacing = 48;
+						- m_transform = 1 0 0 1 882 1125 ;
+						- m_nHorizontalSpacing = -352;
+						- m_nVerticalSpacing = 8;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 1 1277 1238  ;
+					- m_arrow = 1 1277 1133  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1003 1094 ;
-					- m_TargetPort = 513 1282 ;
+					- m_SourcePort = 1003 657 ;
+					- m_TargetPort = 507 1280 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}
@@ -9741,17 +9724,17 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 						- m_position = 4 -6 -9  62 -9  62 9  -6 9  ;
 						- m_nIdent = 0;
 						- m_bImplicitSetRectPoints = 0;
-						- m_transform = 1 0 0 1 886 1197 ;
-						- m_nHorizontalSpacing = -137;
-						- m_nVerticalSpacing = 114;
+						- m_transform = 1 0 0 1 890 1196 ;
+						- m_nHorizontalSpacing = -132;
+						- m_nVerticalSpacing = 155;
 						- m_nOrientationCtrlPt = 8;
 					}
-					- m_arrow = 1 1066 1210  ;
+					- m_arrow = 1 1065 1210  ;
 					- m_anglePoint1 = 0 0 ;
 					- m_anglePoint2 = 0 0 ;
 					- m_line_style = 2;
-					- m_SourcePort = 1058 886 ;
-					- m_TargetPort = 814 1451 ;
+					- m_SourcePort = 1058 1193 ;
+					- m_TargetPort = 810 1451 ;
 					- m_ShowName = 0;
 					- m_ShowStereotype = 1;
 				}

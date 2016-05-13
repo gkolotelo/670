@@ -61,12 +61,12 @@ void sendACK(char cRetVal)
 
 
 /**
- * Method name:			ledCommand
+ * Method name:			interpreter_ledCommand
  * Method description: 	Executes commands pertinent to led operation.
  * Input params:      	n/a                      
  * Output params:     	char = error code.                       
  */
-char ledCommand()
+char interpreter_ledCommand()
 {
 	uint8_t uiCommand, uiLedPos;
 	status_type_e eStatus;
@@ -110,12 +110,12 @@ char ledCommand()
 
 
 /**
- * Method name:			switchCommand
+ * Method name:			interpreter_switchCommand
  * Method description: 	Executes commands pertinent to switch operation.
  * Input params:      	n/a                      
  * Output params:     	char = error code.                       
  */
-char switchCommand()
+char interpreter_switchCommand()
 {
 	uint8_t uiSwPos;
 	status_type_e eStatus;
@@ -134,12 +134,12 @@ char switchCommand()
 
 
 /**
- * Method name:			buzzerCommand
+ * Method name:			interpreter_buzzerCommand
  * Method description: 	Executes commands pertinent to buzzer operation.
  * Input params:      	n/a                      
  * Output params:     	char = error code.                       
  */
-char buzzerCommand()
+char interpreter_buzzerCommand()
 {
 	uint8_t ui100, ui10, ui1, uiTime;
 	while (UART0_BRD_S1_RDRF(UART0) == 0);
@@ -171,15 +171,15 @@ void interpreter_readCommand()
 	{
 		case 'L':
 		case 'l':
-			uiRetVal = ledCommand();
+			uiRetVal = interpreter_ledCommand();
 			break;
 		case 'S':
 		case 's':
-			uiRetVal = switchCommand();
+			uiRetVal = interpreter_switchCommand();
 			break;
 		case 'B':
 		case 'b':
-			uiRetVal = buzzerCommand();
+			uiRetVal = interpreter_buzzerCommand();
 			break;
 		default:
 			uiRetVal = ERROR;

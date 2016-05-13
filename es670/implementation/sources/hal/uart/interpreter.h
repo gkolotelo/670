@@ -34,4 +34,28 @@ void interpreter_readCommand();
  */
 void interpreter_init();
 
-#endif
+/**
+ * Method name:			ledCommand
+ * Method description: 	Executes commands pertinent to led operation.
+ * Input params:      	n/a                      
+ * Output params:     	char = error code.                       
+ */
+char interpreter_ledCommand();
+
+/**
+ * Method name:			switchCommand
+ * Method description: 	Executes commands pertinent to switch operation.
+ * Input params:      	n/a                      
+ * Output params:     	char = error code.                       
+ */
+char interpreter_switchCommand();
+
+/**
+ * Method name:			buzzerCommand
+ * Method description: 	Executes commands pertinent to buzzer operation.
+ * Input params:      	n/a                      
+ * Output params:     	char = error code.                       
+ */
+char interpreter_buzzerCommand();
+
+#endif /*SOURCES_INTERPRETER_H_*/
