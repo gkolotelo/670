@@ -1,0 +1,23 @@
+I-Logix-RPY-Archive version 8.5.2 Modeler * 1159120
+
+- filesTable = { IRPYRawContainer 
+	- size = 16;
+	- value = "Projects.rpl" ""
+	"Projeto_ES670.rpy" ""
+	"Projeto_ES670_rpy\\FRDM_KL25Z.cmp" "FRDM_KL25Z"
+	"Projeto_ES670_rpy\\_Projeto_Pratico.sbs" "_Projeto_Pratico"
+	"Projeto_ES670_rpy\\_Requisitos.sbs" "_Requisitos"
+	"Projeto_ES670_rpy\\buzzer.sbs" "sources::hal::buzzer"
+	"Projeto_ES670_rpy\\display_7segments.sbs" "sources::hal::display_7segments"
+	"Projeto_ES670_rpy\\es670_peripheral_board.sbs" "sources::hal::es670_peripheral_board"
+	"Projeto_ES670_rpy\\hal.sbs" "sources::hal"
+	"Projeto_ES670_rpy\\lcd.sbs" "sources::hal::lcd"
+	"Projeto_ES670_rpy\\ledswi.sbs" "sources::hal::ledswi"
+	"Projeto_ES670_rpy\\main.sbs" "sources::main"
+	"Projeto_ES670_rpy\\mcg.sbs" "sources::hal::mcg"
+	"Projeto_ES670_rpy\\sources.sbs" "sources"
+	"Projeto_ES670_rpy\\uart.sbs" "sources::hal::uart"
+	"Projeto_ES670_rpy\\util.sbs" "sources::hal::util"
+	
+}
+
