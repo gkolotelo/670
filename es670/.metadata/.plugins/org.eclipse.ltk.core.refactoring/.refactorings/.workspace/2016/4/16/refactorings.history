@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Delete resource &apos;implementation/sources/hal/uart/fsl_debug_console.c&apos;" deleteContents="false" description="Delete resource &apos;implementation/sources/hal/uart/fsl_debug_console.c&apos;" element1="/implementation/sources/hal/uart/fsl_debug_console.c" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1460766666983"/>
-</session>
