@@ -8,12 +8,55 @@
 #define TPM1_CHANNEL_WIDTH 1
 #define TPM2_CHANNEL_WIDTH 1
 
+typedef enum
+{
+    NoneClk,
+    McgPllFllClk,
+    OscerClk,
+    McgIrcClk
+} pwm_clock_source_e;
 
-void pwm_initPWM(TPM_Type * timer, unsigned int uiChannel)
+typedef enum
+{
+	Edge,
+	Center,
+	EdgeInverted
+} pwm_alignment_e;
+
+typedef enum
+{
+	Prescaler1,
+	Prescaler2,
+	Prescaler4,
+	Prescaler8,
+	Prescaler16,
+	Prescaler32,
+	Prescaler64,
+	Prescaler128
+} pwm_prescaler_e;
+
+typedef struct
+{
+	pwm_clock_source_e clock_source;
+	pwm_prescaler_e prescaler_value;
+	uint16_t period_ms;
+} tpm_config;
+
+typedef struct
+{
+	pwm_alignment_e alignment;
+	uint16_t pulse_width_ms;
+	bool interrupt_enable;
+} channel_config;
+
+
+
+void pwm_initPWM(TPM_Type * timer, tpm_config config)
 {
 
-	/*MCG_BASE_PTR->C1 = MCG_C1_IREFS_MASK | MCG_C1_IRCLKEN_MASK;
-	MCG_BASE_PTR->C2 = MCG_C2_IRCS_MASK; //Select fast internal clock
+	/*SIM_BASE_PTR->SCGC6 |= SIM_SCGC6_TPM2_MASK;
+	SIM_BASE_PTR->SOPT2 |= SIM_SOPT2_TPMSRC(3);
+
 
 	SIM_SCGC5 |= (SIM_SCGC5_PORTD_MASK);
 	PORTD_PCR1 = PORT_PCR_MUX(4);
@@ -41,23 +84,30 @@ void pwm_initPWM(TPM_Type * timer, unsigned int uiChannel)
 	timer->CONTROLS[uiChannel].CnV = 16383u;
 */
 
-    MCG_BASE_PTR->C1 = MCG_C1_IREFS_MASK | MCG_C1_IRCLKEN_MASK;
-    MCG_BASE_PTR->C2 = MCG_C2_IRCS_MASK;
+    //MCG_BASE_PTR->C1 = MCG_C1_IREFS_MASK | MCG_C1_IRCLKEN_MASK;
+    //MCG_BASE_PTR->C2 = MCG_C2_IRCS_MASK;
     SIM_BASE_PTR->SCGC6 |= SIM_SCGC6_TPM2_MASK;
     SIM_BASE_PTR->SOPT2 |= SIM_SOPT2_TPMSRC(3);
 
+    TPM2_BASE_PTR->SC |= TPM_SC_CMOD(0); 				// Disable clock to TMP2  (SC/CMOD)
+    while (TPM2_BASE_PTR->SC&TPM_SC_CMOD_MASK); 		// Wait to acknowledge timer is disabled (SC/CMOD)
+    TPM2_BASE_PTR->SC |= TPM_SC_TOF(0); 					// Clear Timer Overflow Flag (SC/TOF)
+    TPM2_BASE_PTR->SC |= TPM_SC_CPWMS(0); 					// Set up counting mode (SC/CPWMS)
+    TPM2_BASE_PTR->CNT = 0;									// Reset Counter  (CNT)
+    TPM2_BASE_PTR->MOD = 32000;
+
     TPM2_BASE_PTR->SC = TPM_SC_CMOD(1) | TPM_SC_PS(0);
-    TPM2_BASE_PTR->MOD = 106383;
+
 
     SIM_BASE_PTR->SCGC5 |= SIM_SCGC5_PORTB_MASK;
     PORTB_BASE_PTR->PCR[18] = PORTB_BASE_PTR->PCR[19] = PORT_PCR_MUX(3);
 
-    PTB_BASE_PTR->PDDR = 1 << 18;
+    PTB_BASE_PTR->PDDR = 0b11 << 19;
 
-    TPM2_BASE_PTR->CONTROLS[0].CnSC = TPM_CnSC_MSB_MASK | TPM_CnSC_ELSA_MASK;
+    TPM2_BASE_PTR->CONTROLS[0].CnSC = TPM_CnSC_MSB_MASK | TPM_CnSC_ELSB_MASK;
     TPM2_BASE_PTR->CONTROLS[1].CnSC = TPM_CnSC_MSB_MASK | TPM_CnSC_ELSB_MASK;
 
-    TPM2_BASE_PTR->CONTROLS[0].CnV = TPM2_BASE_PTR->CONTROLS[1].CnV = TPM2_BASE_PTR->MOD;
+    TPM2_BASE_PTR->CONTROLS[0].CnV = TPM2_BASE_PTR->CONTROLS[1].CnV = 16000;
 
 
 

@@ -52,10 +52,10 @@ int main(void)
     peripheralInit();
     // Set Red LED for Status
     SIM_SCGC5 |= (SIM_SCGC5_PORTB_MASK);
-    PORTB_PCR18 = PORT_PCR_MUX(1);
-    PTB_BASE_PTR->PDDR = 1 << 18;
+    //PORTB_PCR18 = PORT_PCR_MUX(1);
+    //PTB_BASE_PTR->PDDR = 1 << 18;
 
-
+    pwm_initPWM(TPM2,1);
 
     // Locals
     char readout[15];
@@ -69,7 +69,6 @@ int main(void)
     	// Read and print counter value
     	//value = tach_readCounter();
     	value = tach_Hz(CYCLIC_EXECUTIVE_PERIOD/1000);
-
     	lcd_itoa(value, readout);
     	lcd_clearLine(0);
     	lcd_writeString(readout);
