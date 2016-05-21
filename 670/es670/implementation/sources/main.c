@@ -13,6 +13,8 @@
 #include "hal/lcd/lcd.h"
 #include "hal/pwm/pwm.h"
 #include "hal/util/tc_hal.h"
+#include "hal/cooler/cooler.h"
+#include "hal/tach/tach.h"
 
 /* defines */
 #define CYCLIC_EXECUTIVE_PERIOD         100 * 10000 /* 1000000 micro seconds */
@@ -39,50 +41,43 @@ int peripheralInit()
 	display_7segments_initDisplays();
 	lcd_initLcd();
 	cooler_init();
+	tach_init();
+
+	tc_installLptmr0(CYCLIC_EXECUTIVE_PERIOD, main_cyclicExecuteIsr);
 }
-char* itoa(int i, char b[]){
-    char const digit[] = "0123456789";
-    char* p = b;
-    if(i<0){
-        *p++ = '-';
-        i *= -1;
-    }
-    int shifter = i;
-    do{ //Move to where representation ends
-        ++p;
-        shifter = shifter/10;
-    }while(shifter);
-    *p = '\0';
-    do{ //Move back, inserting digits as u go
-        *--p = digit[i%10];
-        i = i/10;
-    }while(i);
-    return b;
-}
-int pos = 0;
-unsigned int value = 0;
-char val[15];
+
 int main(void)
 {
     boardInit();
     peripheralInit();
-    /* configure cyclic executive interruption */
-    tc_installLptmr0(CYCLIC_EXECUTIVE_PERIOD, main_cyclicExecuteIsr);
+    // Set Red LED for Status
     SIM_SCGC5 |= (SIM_SCGC5_PORTB_MASK);
     PORTB_PCR18 = PORT_PCR_MUX(1);
     PTB_BASE_PTR->PDDR = 1 << 18;
-    tach_init();
+
+
+
+    // Locals
+    char readout[15];
+    uint16_t value;
 
     for (;;) {
     	//interpreter_readCommand();
+    	// Blink Red LED for Status
     	PTB_BASE_PTR->PTOR = 1 << 18;
-    	value = TPM0_BASE_PTR->CNT;
-    	itoa(value, val);
-    	lcd_writeString(val);
 
+    	// Read and print counter value
+    	//value = tach_readCounter();
+    	value = tach_Hz(CYCLIC_EXECUTIVE_PERIOD/1000);
+
+    	lcd_itoa(value, readout);
+    	lcd_clearLine(0);
+    	lcd_writeString(readout);
+    	lcd_writeString(" Hz");
+
+    	// Wait for next period
     	while(!uiFlagNextPeriod);
     	uiFlagNextPeriod = 0;
-    	lcd_setCursor(0,0);
 
     }
 

@@ -5,8 +5,8 @@
 /* Author name:      dloubach                                        */
 /* Modified by:      Guilherme Kairalla Kolotelo                     */
 /*                   Kaique Arce de Almeida Camargo                  */
-/* Creation date:    16out2015                                       */
-/* Revision date:    06may2016                                       */
+/* Creation date:    16Oct2015                                       */
+/* Revision date:    20May2016                                       */
 /* ***************************************************************** */
 
 #ifndef SOURCES_ES670_PERIPHERAL_BOARD_H_
@@ -125,8 +125,13 @@
 #define COOLER_PIN 					13U
 #define COOLER_DIR					0X01
 #define COOLER_MUX					0X01
-
 /*             END OF COOLER DEFINITIONS                  */
 
+/*                  TACH DEFINITIONS                      */
+#define TACH_PIN 					29U
+#define TACH_ALT					4U
+#define TACH_CLK_SRC 				2U
+
+/*              END OF TACH DEFINITIONS                   */
 
 #endif /* SOURCES_ES670_PERIPHERAL_BOARD_H_ */

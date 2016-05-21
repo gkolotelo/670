@@ -1,6 +1,18 @@
+/**
+ *
+ * File name:        	cooler.h                            
+ * File description: 	Header file containing methods for
+ * 						interacting with the cooler
+ *                    
+ * Authors:          	Guilherme Kairalla Kolotelo                     
+ * 		             	Kaique Arce de Almeida Camargo                  
+ * Creation date:    	13May2016                                       
+ * Revision date:    	20May2016                                       
+ *
+ */
 
 #include "../es670_peripheral_board.h"
-
+#include "cooler.h"
 
 void cooler_init()
 {

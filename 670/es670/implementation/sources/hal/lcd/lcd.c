@@ -71,7 +71,6 @@ void lcd_initLcd(void)
 }
 
 
-
 /* ************************************************ */
 /* Method name:        lcd_write2Lcd                */
 /* Method description: Send command or data to LCD  */
@@ -105,7 +104,6 @@ void lcd_write2Lcd(unsigned char ucBuffer,  unsigned char cDataType)
 }
 
 
-
 /* ************************************************ */
 /* Method name:        lcd_writeData                */
 /* Method description: Write data to be displayed   */
@@ -117,7 +115,6 @@ void lcd_writeData(unsigned char ucData)
     /* just a relay to send data */
     lcd_write2Lcd(ucData, LCD_RS_DATA);
 }
-
 
 
 /* ************************************************ */
@@ -133,19 +130,18 @@ void lcd_sendCommand(unsigned char ucCmd)
 }
 
 
-
 /* ************************************************ */
 /* Method name:        lcd_setCursor                */
 /* Method description: Set cursor line and column   */
-/* Input params:       cLine = LINE0..LINE1         */
-/*                     cColumn = COLUMN0..MAX_COLUMN*/
+/* Input params:       ucLine = LINE0..LINE1        */
+/*                     ucColumn = COLUMN0..MAX_COLUMN*/
 /* Output params:       n/a                         */
 /* ************************************************ */
-void lcd_setCursor(unsigned char cLine, unsigned char cColumn)
+void lcd_setCursor(unsigned char ucLine, unsigned char ucColumn)
 {
     char cCommand;
 
-    if(LINE0 == cLine)
+    if(LINE0 == ucLine)
         /* line 0 */
         cCommand = L0C0_BASE;
     else
@@ -153,12 +149,11 @@ void lcd_setCursor(unsigned char cLine, unsigned char cColumn)
         cCommand = L1C0_BASE;
 
     /* maximum MAX_COLUMN columns */
-    cCommand += (cColumn & MAX_COLUMN);
+    cCommand += (ucColumn & MAX_COLUMN);
 
     // send the command to set the cursor
     lcd_sendCommand(cCommand);
 }
-
 
 
 /* ************************************************ */
@@ -176,6 +171,19 @@ void lcd_writeString(const char *cBuffer)
     };
 }
 
+
+/* ************************************************ */
+/* Method name:        lcd_clearLine                */
+/* Method description: Clears chars from line       */
+/* Input params:       ucLine = LINE0..LINE1        */
+/* Output params:      n/a                          */
+/* ************************************************ */
+void lcd_clearLine(unsigned char ucLine)
+{
+	lcd_setCursor(ucLine, 0);
+	lcd_writeString("                ");
+	lcd_setCursor(ucLine, 0);
+}
 
 
 /* ************************************************ */
@@ -198,4 +206,32 @@ void lcd_dummyText(void)
     // set the cursor line 1, column 0
     lcd_setCursor(1,0);
     lcd_writeString("Prj Sis Embarcad");
+}
+
+
+/* ************************************************ */
+/* Method name:        lcd_itoa                     */
+/* Method description: Integer to char array        */
+/* Input params:       int i = integer to convert   */
+/* I				   char* b = char array output  */
+/* Output params:      char* char pointer to output */
+/* ************************************************ */
+char* lcd_itoa(int i, char b[]){
+    char const digit[] = "0123456789";
+    char* p = b;
+    if(i<0){
+        *p++ = '-';
+        i *= -1;
+    }
+    int shifter = i;
+    do{ //Move to where representation ends
+        ++p;
+        shifter = shifter/10;
+    }while(shifter);
+    *p = '\0';
+    do{ //Move back, inserting digits as u go
+        *--p = digit[i%10];
+        i = i/10;
+    }while(i);
+    return b;
 }

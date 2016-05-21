@@ -21,7 +21,8 @@ sources/main.o: ../sources/main.c \
  C:\Freescale\KSDK_1.2.0\platform\drivers\inc/fsl_lptmr_driver.h \
  C:\Freescale\KSDK_1.2.0\platform\hal\inc/fsl_lptmr_hal.h \
  C:\Freescale\KSDK_1.2.0\platform\hal\inc/fsl_sim_hal.h \
- c:\freescale\ksdk_1.2.0\platform\hal\src\sim\mkl25z4\fsl_sim_hal_mkl25z4.h
+ c:\freescale\ksdk_1.2.0\platform\hal\src\sim\mkl25z4\fsl_sim_hal_mkl25z4.h \
+ ../sources/hal/cooler/cooler.h ../sources/hal/tach/tach.h
 
 C:\Freescale\KSDK_1.2.0/platform/utilities/inc/fsl_debug_console.h:
 
@@ -76,3 +77,7 @@ C:\Freescale\KSDK_1.2.0\platform\hal\inc/fsl_lptmr_hal.h:
 C:\Freescale\KSDK_1.2.0\platform\hal\inc/fsl_sim_hal.h:
 
 c:\freescale\ksdk_1.2.0\platform\hal\src\sim\mkl25z4\fsl_sim_hal_mkl25z4.h:
+
+../sources/hal/cooler/cooler.h:
+
+../sources/hal/tach/tach.h:

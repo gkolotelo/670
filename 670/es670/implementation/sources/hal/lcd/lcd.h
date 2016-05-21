@@ -65,8 +65,15 @@ void lcd_writeString(const char *cBuffer);
 /*                     cColumn = COLUMN0..MAX_COLUMN*/
 /* Output params:      n/a                          */
 /* ************************************************ */
-void lcd_setCursor(unsigned char cLine, unsigned char cColumn);
+void lcd_setCursor(unsigned char ucLine, unsigned char ucColumn);
 
+/* ************************************************ */
+/* Method name:        lcd_clearLine                */
+/* Method description: Clears chars from line       */
+/* Input params:       ucLine = LINE0..LINE1        */
+/* Output params:      n/a                          */
+/* ************************************************ */
+void lcd_clearLine(unsigned char ucLine);
 
 /* ************************************************ */
 /* Method name:        lcd_dummyText                */
@@ -75,6 +82,15 @@ void lcd_setCursor(unsigned char cLine, unsigned char cColumn);
 /* Output params:      n/a                          */
 /* ************************************************ */
 void lcd_dummyText(void);
+
+/* ************************************************ */
+/* Method name:        itoa                         */
+/* Method description: Integer to char array        */
+/* Input params:       int i = integer to convert   */
+/* I				   char* b = char array output  */
+/* Output params:      char* char pointer to output */
+/* ************************************************ */
+char* lcd_itoa(int i, char b[]);
 
 
 #endif /* SOURCES_LCD_HAL_H_ */

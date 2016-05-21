@@ -109,4 +109,4 @@ void display_7segments_displayOff(display_position_e eDispPos);
  */
 void display_7segments_displayMany(display_charater_e eChar1, display_charater_e eChar2, display_charater_e eChar3, display_charater_e eChar4);
 
-#endif
+#endif /* SOURCES_DISPLAY_7SEGMENTS_DISPLAY_7SEGMENTS_H_ */

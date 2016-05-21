@@ -8,11 +8,11 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 		- _name = "hal";
 		- _id = GUID bf69319c-0115-404a-8fb0-0dd5c03e27cc;
 	}
-	- _id = GUID f5d6f4c4-ca70-4386-9866-389eed46d9b7;
+	- _id = GUID bfe767fe-0ac0-4b5b-94d8-db64f1b7f1e1;
 	- _myState = 8192;
-	- _name = "util";
-	- _objectCreation = "4426605201720161518954544";
-	- _umlDependencyID = "2093";
+	- _name = "tach";
+	- _objectCreation = "408902202420161520137540";
+	- _umlDependencyID = "1991";
 	- _theMainDiagram = { IHandle 
 		- _m2Class = "IDiagram";
 		- _filename = "";
@@ -22,21 +22,21 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 		- _id = GUID 604328de-2202-48b3-9d1a-353bbeb75331;
 	}
 	- _lastID = 1;
-	- weakCGTime = 5.20.2016::18:5:45;
-	- strongCGTime = 4.2.2016::0:34:31;
-	- _defaultComposite = GUID 3dc3cece-0e6b-4ec5-b915-4d0f0e751e4f;
+	- weakCGTime = 5.20.2016::18:24:13;
+	- strongCGTime = 5.20.2016::18:1:13;
+	- _defaultComposite = GUID 803d37f8-b249-4646-9152-8316c6dc550b;
 	- _eventsBaseID = -1;
 	- Classes = { IRPYRawContainer 
-		- size = 3;
+		- size = 2;
 		- value = 
 		{ IClass 
-			- _id = GUID 3dc3cece-0e6b-4ec5-b915-4d0f0e751e4f;
+			- _id = GUID 803d37f8-b249-4646-9152-8316c6dc550b;
 			- _myState = 40960;
 			- _name = "TopLevel";
-			- _objectCreation = "4426607201720161518952544";
-			- _umlDependencyID = "2458";
-			- weakCGTime = 4.2.2016::0:34:31;
-			- strongCGTime = 4.2.2016::0:34:31;
+			- _objectCreation = "408904202420161520135540";
+			- _umlDependencyID = "2386";
+			- weakCGTime = 12.31.1969::22:0:0;
+			- strongCGTime = 12.31.1969::22:0:0;
 			- _multiplicity = "";
 			- _itsStateChart = { IHandle 
 				- _m2Class = "";
@@ -44,20 +44,20 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 			- _classModifier = Unspecified;
 		}
 		{ IClass 
-			- _id = GUID d00d39bc-27dd-42e5-87aa-b5bf491dbe5b;
+			- _id = GUID 79f7312b-5fd3-4716-a9fc-ab6a61797eba;
 			- _myState = 8192;
-			- _name = "util";
-			- _objectCreation = "4426609201720161518950544";
-			- _umlDependencyID = "2093";
+			- _name = "tach";
+			- _objectCreation = "408906202420161520133540";
+			- _umlDependencyID = "1991";
 			- Dependencies = { IRPYRawContainer 
 				- size = 1;
 				- value = 
 				{ IDependency 
-					- _id = GUID 947a2acf-c076-44d9-a62d-540dd1cd9c5b;
+					- _id = GUID b9c70b62-f05e-4e0f-b419-b2579cef5c82;
 					- _myState = 2048;
 					- _name = "es670_peripheral_board";
-					- _objectCreation = "4426611201720161518948544";
-					- _umlDependencyID = "3798";
+					- _objectCreation = "408908202420161520131540";
+					- _umlDependencyID = "3726";
 					- Stereotypes = { IRPYRawContainer 
 						- size = 1;
 						- value = 
@@ -92,146 +92,6 @@ I-Logix-RPY-Archive version 8.5.2 Modeler C++ 1159120
 					- _id = GUID 4ea1c1da-7dc6-4a35-bc5a-313393e8408f;
 				}
 			}
-			- _description = { IDescription 
-				- _text = "File name:		 util.c
-File description: This file has a couple of useful functions to
-		 make programming more productive
-Author name:      dloubach
-Creation date:    09jan2015
-Revision date:    09jan2015
-";
-			}
-			- _lastID = 5;
-			- weakCGTime = 3.30.2016::14:0:10;
-			- strongCGTime = 1.22.2015::12:24:17;
-			- Operations = { IRPYRawContainer 
-				- size = 4;
-				- value = 
-				{ IPrimitiveOperation 
-					- _id = GUID 153be061-afed-4fea-b6d5-d9b9065886f1;
-					- _myState = 8192;
-					- _name = "genDelay088us";
-					- _objectCreation = "4426613201720161518946544";
-					- _umlDependencyID = "2848";
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesC++.sbs";
-						- _subsystem = "PredefinedTypesCpp";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID 350ff3d5-d41e-4ccb-beb1-6e64d3334969;
-					- _myState = 8192;
-					- _name = "genDelay250us";
-					- _objectCreation = "4426615201720161518944544";
-					- _umlDependencyID = "2839";
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesC++.sbs";
-						- _subsystem = "PredefinedTypesCpp";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID ae534ce2-2a74-4e8b-be3f-07658458cc99;
-					- _myState = 8192;
-					- _name = "genDelay1ms";
-					- _objectCreation = "4426617201720161518942544";
-					- _umlDependencyID = "2729";
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesC++.sbs";
-						- _subsystem = "PredefinedTypesCpp";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-				}
-				{ IPrimitiveOperation 
-					- _id = GUID 9ac8cefe-7f1e-4aa1-b492-663c702058a4;
-					- _myState = 8192;
-					- _name = "genDelay10ms";
-					- _objectCreation = "4426619201720161518940544";
-					- _umlDependencyID = "2777";
-					- _virtual = 0;
-					- Args = { IRPYRawContainer 
-						- size = 0;
-					}
-					- _returnType = { IHandle 
-						- _m2Class = "IType";
-						- _filename = "PredefinedTypesC++.sbs";
-						- _subsystem = "PredefinedTypesCpp";
-						- _class = "";
-						- _name = "void";
-						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
-					}
-					- _abstract = 0;
-					- _final = 0;
-					- _concurrency = Sequential;
-					- _protection = iPublic;
-					- _static = 0;
-					- _constant = 0;
-				}
-			}
-			- _multiplicity = "";
-			- _itsStateChart = { IHandle 
-				- _m2Class = "";
-			}
-			- _classModifier = Unspecified;
-		}
-		{ IClass 
-			- _id = GUID 80e4883c-b27b-44e0-b729-869519879a36;
-			- _myState = 8192;
-			- _name = "tc_hal";
-			- _objectCreation = "4426621201720161518938544";
-			- _umlDependencyID = "2266";
-			- Stereotypes = { IRPYRawContainer 
-				- size = 1;
-				- value = 
-				{ IHandle 
-					- _m2Class = "IStereotype";
-					- _filename = "PredefinedTypesC++.sbs";
-					- _subsystem = "PredefinedTypesCpp";
-					- _class = "";
-					- _name = "Subsystem";
-					- _id = GUID 4ea1c1da-7dc6-4a35-bc5a-313393e8408f;
-				}
-			}
 			- _theMainDiagram = { IHandle 
 				- _m2Class = "IDiagram";
 				- _filename = "";
@@ -240,41 +100,153 @@ Revision date:    09jan2015
 				- _name = "diag_definicao_semana_04_05";
 				- _id = GUID f53d507c-79b1-4f7f-850a-0c96a124e9bd;
 			}
-			- _lastID = 2;
-			- Declaratives = { IRPYRawContainer 
-				- size = 1;
-				- value = 
-				{ IType 
-					- _id = GUID 4d181c6a-a8b9-4977-9e7f-c61836aa6e11;
-					- _myState = 8192;
-					- _name = "lptmr_callback_t";
-					- _objectCreation = "4426623201720161518936544";
-					- _umlDependencyID = "3325";
-					- _declaration = "";
-					- _kind = Language;
-				}
-			}
-			- weakCGTime = 5.20.2016::18:15:22;
-			- strongCGTime = 5.20.2016::18:6:2;
+			- _lastID = 8;
+			- weakCGTime = 5.20.2016::18:24:32;
+			- strongCGTime = 5.20.2016::18:11:54;
 			- Operations = { IRPYRawContainer 
-				- size = 1;
+				- size = 7;
 				- value = 
 				{ IPrimitiveOperation 
-					- _id = GUID 9532ef55-b05c-4166-9c06-c09b69057c0a;
+					- _id = GUID fca011ef-2f83-41c9-8dc3-ff16c0bd6ee2;
 					- _myState = 8192;
-					- _name = "installLptmr0";
-					- _objectCreation = "4426625201720161518934544";
-					- _umlDependencyID = "2981";
+					- _name = "init";
+					- _objectCreation = "408910202420161520129540";
+					- _umlDependencyID = "2011";
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID a3bf21ea-db57-4162-80ec-9c6b7fd54269;
+					- _myState = 8192;
+					- _name = "startCounter";
+					- _objectCreation = "408912202420161520127540";
+					- _umlDependencyID = "2869";
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID b5dd9300-476f-4a5e-b147-700312d14a09;
+					- _myState = 8192;
+					- _name = "stopCounter";
+					- _objectCreation = "408914202420161520125540";
+					- _umlDependencyID = "2765";
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 4da3443e-b0bc-415c-af99-2676bb4258b4;
+					- _myState = 8192;
+					- _name = "readCounter";
+					- _objectCreation = "408916202420161520123540";
+					- _umlDependencyID = "2723";
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "unsigned int";
+						- _id = GUID 7688bde5-e3a0-4b4d-bcd7-cbfa35c3b811;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 5a06bbe0-cee1-4673-bd19-0380e48ed4f2;
+					- _myState = 8192;
+					- _name = "resetCounter";
+					- _objectCreation = "408918202420161520121540";
+					- _umlDependencyID = "2858";
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 0;
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "void";
+						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID e135eab3-14ab-4357-ba0e-978c6c11c4b5;
+					- _myState = 8192;
+					- _name = "Hz";
+					- _objectCreation = "408920202420161520119540";
+					- _umlDependencyID = "1769";
 					- _lastID = 2;
 					- _virtual = 0;
 					- Args = { IRPYRawContainer 
-						- size = 2;
+						- size = 1;
 						- value = 
 						{ IArgument 
-							- _id = GUID cd5458a1-bda9-4a45-be52-851be49952d7;
-							- _name = "uiTimeInUs";
-							- _objectCreation = "4426627201720161518932544";
-							- _umlDependencyID = "2651";
+							- _id = GUID 503e01f5-70ac-4077-ab48-d4d374dd1ccc;
+							- _name = "uitimeBase_ms";
+							- _objectCreation = "408922202420161520117540";
+							- _umlDependencyID = "2926";
 							- _typeOf = { IHandle 
 								- _m2Class = "IType";
 								- _filename = "PredefinedTypesC++.sbs";
@@ -286,14 +258,45 @@ Revision date:    09jan2015
 							- _isOrdered = 0;
 							- _argumentDirection = In;
 						}
+					}
+					- _returnType = { IHandle 
+						- _m2Class = "IType";
+						- _filename = "PredefinedTypesC++.sbs";
+						- _subsystem = "PredefinedTypesCpp";
+						- _class = "";
+						- _name = "unsigned int";
+						- _id = GUID 7688bde5-e3a0-4b4d-bcd7-cbfa35c3b811;
+					}
+					- _abstract = 0;
+					- _final = 0;
+					- _concurrency = Sequential;
+					- _protection = iPublic;
+					- _static = 0;
+					- _constant = 0;
+				}
+				{ IPrimitiveOperation 
+					- _id = GUID 628d364b-5601-4e33-96b3-50da7f366e1f;
+					- _myState = 8192;
+					- _name = "RPM";
+					- _objectCreation = "408924202420161520115540";
+					- _umlDependencyID = "1814";
+					- _lastID = 1;
+					- _virtual = 0;
+					- Args = { IRPYRawContainer 
+						- size = 1;
+						- value = 
 						{ IArgument 
-							- _id = GUID b8b74975-21fd-4af5-9e6c-7ab474a0c514;
-							- _name = "tUserCallback";
-							- _objectCreation = "4426629201720161518930544";
-							- _umlDependencyID = "2959";
+							- _id = GUID 988b8899-cfe2-4ef5-8979-03d1a08bf43e;
+							- _name = "uitimeBase_ms";
+							- _objectCreation = "408926202420161520113540";
+							- _umlDependencyID = "2926";
 							- _typeOf = { IHandle 
 								- _m2Class = "IType";
-								- _id = GUID 4d181c6a-a8b9-4977-9e7f-c61836aa6e11;
+								- _filename = "PredefinedTypesC++.sbs";
+								- _subsystem = "PredefinedTypesCpp";
+								- _class = "";
+								- _name = "unsigned int";
+								- _id = GUID 7688bde5-e3a0-4b4d-bcd7-cbfa35c3b811;
 							}
 							- _isOrdered = 0;
 							- _argumentDirection = In;
@@ -304,8 +307,8 @@ Revision date:    09jan2015
 						- _filename = "PredefinedTypesC++.sbs";
 						- _subsystem = "PredefinedTypesCpp";
 						- _class = "";
-						- _name = "void";
-						- _id = GUID c6b70728-b655-45a0-abb7-8ea5d3da94be;
+						- _name = "unsigned int";
+						- _id = GUID 7688bde5-e3a0-4b4d-bcd7-cbfa35c3b811;
 					}
 					- _abstract = 0;
 					- _final = 0;
@@ -322,6 +325,6 @@ Revision date:    09jan2015
 			- _classModifier = Unspecified;
 		}
 	}
-	- _configurationRelatedTime = 1.2.1990::0:0:0;
+	- _configurationRelatedTime = 12.31.1969::22:0:0;
 }
 
