@@ -57,10 +57,10 @@ uint16_t tach_Hz(uint16_t timeBase_ms)
 {
 	uint16_t count = tach_readCounter();
 	tach_resetCounter();
-	return count/(timeBase_ms/1000);
+	return count/(timeBase_ms/1000)/7;
 }
 
 uint16_t tach_RPM(uint16_t timeBase_ms)
 {
-	return tach_Hz(timeBase_ms)/60;
+	return tach_Hz(timeBase_ms)/60/7;
 }
