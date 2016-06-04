@@ -94,3 +94,19 @@ int pwm_changeModulePeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig);
  * Output params:     	n/a
  */
 void pwm_deinitPwm(TPM_Type * tTimer);
+
+/**
+ * Method name:			disableCounter
+ * Method description:  Disables the module counter
+ * Input params:      	tTimer = TPMx base address
+ * Output params:     	n/a
+ */
+void pwm_disableCounter(TPM_Type * tTimer)
+
+/**
+ * Method name:			enableCounter
+ * Method description:  Enables the module counter
+ * Input params:      	tTimer = TPMx base address
+ * Output params:     	n/a
+ */
+void pwm_enableCounter(TPM_Type * tTimer)
