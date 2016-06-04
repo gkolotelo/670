@@ -40,7 +40,7 @@ int peripheralInit()
 	ledswi_initLedSwitch(1,3);
 	display_7segments_initDisplays();
 	lcd_initLcd();
-	cooler_init();
+	//cooler_init();
 	tach_init();
 
 	tc_installLptmr0(CYCLIC_EXECUTIVE_PERIOD, main_cyclicExecuteIsr);
@@ -55,7 +55,21 @@ int main(void)
     //PORTB_PCR18 = PORT_PCR_MUX(1);
     //PTB_BASE_PTR->PDDR = 1 << 18;
 
-    pwm_initPWM(TPM2,1);
+    tpm_config tpmConfig;
+    tpmConfig.clock_source = McgIrcClk;
+    tpmConfig.period_ms = 1000;
+    tpmConfig.prescaler_value = Prescaler1;
+    tpmConfig.xtal_frequency = 8000000;
+
+    channel_config channelConfig;
+    channelConfig.alignment = Edge;
+    channelConfig.channel = 1;
+    channelConfig.interrupt_enable = 0;
+    channelConfig.pulse_width_ms = 500;
+
+    pwm_initPWM(TPM1,tpmConfig);
+    pwm_channelInit (TPM1, tpmConfig, channelConfig);
+    pwm_setPortPinPwm(PORTB, GPIOB, 18);
 
     // Locals
     char readout[15];
@@ -64,7 +78,7 @@ int main(void)
     for (;;) {
     	//interpreter_readCommand();
     	// Blink Red LED for Status
-    	PTB_BASE_PTR->PTOR = 1 << 18;
+    	//PTB_BASE_PTR->PTOR = 1 << 18;
 
     	// Read and print counter value
     	//value = tach_readCounter();
