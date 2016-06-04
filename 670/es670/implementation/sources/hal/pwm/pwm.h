@@ -42,14 +42,49 @@ typedef struct
 	uint8_t uiChannel;
 } channel_config_t;
 
-int pwm_initPWM(TPM_Type * tTimer, tpm_config_t tTpmConfig);
+/**
+ * Method name:			initPwm
+ * Method description:  Initializes PWM module with specified configuration
+ * Input params:      	tTimer = TPMx base address
+ * 						tTpmConfig = Configuration for TPM module
+ * Output params:     	int = Error (0) or Success (0)
+ */
+int pwm_initPwm(TPM_Type * tTimer, tpm_config_t tTpmConfig);
 
+/**
+ * Method name:			channelInit
+ * Method description:  Initializes the PWM channel with specified configuration
+ * Input params:      	tTimer = TPMx base address
+ * 						tTpmConfig = Configuration for TPM module
+ * 						tChannelConfig = Configuration for PWM channel
+ * Output params:     	int = Error (0) or Success (0)
+ */
 int pwm_channelInit (TPM_Type * tTimer, tpm_config tTpmConfig, channel_config_t tChannelConfig);
 
-int pwm_changeChannelPeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig, uint16_t uiPeriod_ms);
+/**
+ * Method name:			changeChannelPeriod
+ * Method description:  Changes the period of the PWM on the channel
+ * Input params:      	tTimer = TPMx base address
+ * 						tTpmConfig = Configuration for TPM module
+ * 						uiChannel = PWM channel
+ * 						uiPulseWidth_ms = Channel period in ms
+ * Output params:     	int = Error (0) or Success (0)
+ */
+int pwm_changeChannelDuty(TPM_Type * tTimer, tpm_config_t tTpmConfig, uint16_t uiChannel, uint16_t uiPulseWidth_ms);
 
+/**
+ * Method name:			changeModulePeriod
+ * Method description:  Changes the TPM module period
+ * Input params:      	tTimer = TPMx base address
+ * 						tTpmConfig = Configuration for TPM module
+ * Output params:     	int = Error (0) or Success (0)  	                        
+ */
 int pwm_changeModulePeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig);
 
-void pwm_disablePwm(TPM_Type * tTimer);
-
-void pwm_enablePwm(TPM_Type * tTimer);
+/**
+ * Method name:			deinitPwm
+ * Method description:  Deinitializes PWM module
+ * Input params:      	tTimer = TPMx base address
+ * Output params:     	n/a
+ */
+void pwm_deinitPwm(TPM_Type * tTimer);

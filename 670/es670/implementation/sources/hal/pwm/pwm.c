@@ -47,7 +47,7 @@ int pwm_initPWM(TPM_Type * tTimer, tpm_config_t tTpmConfig)
     while (tTimer->SC&TPM_SC_CMOD_MASK); 			// Wait to acknowledge tTimer is disabled (SC,CMOD)
     tTimer->SC |= TPM_SC_TOF(0); 					// Clear tTimer Overflow Flag (SC,TOF)
     tTimer->SC |= TPM_SC_CPWMS(0); 					// Set up counting mode (SC,CPWMS)
-    tTimer->CNT = 0;									// Reset Counter  (CNT)
+    tTimer->CNT = 0;								// Reset Counter  (CNT)
 
     tTimer->MOD = cnt_period;						// Set TPM counter period (MOD)
     tTimer->SC = TPM_SC_PS(tTpmConfig.ePrescaler_value);
@@ -106,17 +106,17 @@ int pwm_channelInit (TPM_Type * tTimer, tpm_config_t tTpmConfig, channel_config 
 	return 1;
 }
 
-int pwm_changeChannelPeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig, uint16_t uiPeriod_ms)
+int pwm_changeChannelPeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig, uint16_t uiChannel, uint16_t uiPulseWidth_ms)
 {
 	uint32_t cnt_period, cnv_period;
 	cnsc = 0x00;
 	cnt_period= (1000*(tTpmConfig.uiXtal_frequency/((2 << tTpmConfig.ePrescaler_value)/2))/tTpmConfig.uiPeriod_ms);
 	if (cnt_period > 65536)
 		return 0;
-	cnv_period= (1000*(tTpmConfig.uiXtal_frequency/((2 << tTpmConfig.ePrescaler_value)/2))/tChannelConfig.uiPulse_width_ms);
+	cnv_period= (1000*(tTpmConfig.uiXtal_frequency/((2 << tTpmConfig.ePrescaler_value)/2))/uiPulseWidth_ms);
 	if (cnv_period > cnt_period)
 		return 0;
-	tTimer->CONTROLS[tChannelConfig.uiChannel].CnV = cnv_period;
+	tTimer->CONTROLS[uiChannel].CnV = cnv_period;
 	return 1;
 }
 
@@ -131,15 +131,12 @@ int pwm_changeModulePeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 	return 1;
 }
 
-void pwm_disablePwm(TPM_Type * tTimer)
+void pwm_deinitPwm(TPM_Type * tTimer)
 {
-	tTimer->SC |= TPM_SC_CMOD(0); 		
-	while (tTimer->SC&TPM_SC_CMOD_MASK);
+	tTimer->SC |= TPM_SC_CMOD(0); 						// Disable clock to TMPx  (SC,CMOD)
+    while (tTimer->SC&TPM_SC_CMOD_MASK); 				// Wait to acknowledge tTimer is disabled (SC,CMOD)
+	tTimer->SC |= TPM_SC_TOF(0); 						// Clear tTimer Overflow Flag (SC,TOF)
+    tTimer->SC |= TPM_SC_CPWMS(0); 						// Set up counting mode (SC,CPWMS)
+    tTimer->CNT = 0;									// Reset Counter  (CNT)
 }
-
-void pwm_enablePwm(TPM_Type * tTimer)
-{
-	tTimer->SC = TPM_SC_CMOD(1);
-}
-
 
