@@ -71,6 +71,10 @@ int main(void)
     pwm_channelInit (TPM1, tpmConfig, channelConfig);
     pwm_setPortPinPwm(PORTB, GPIOB, 18);
 
+    SIM_BASE_PTR->SCGC5 |= SIM_SCGC5_PORTB_MASK;
+    PORTB_BASE_PTR->PCR[18] = PORTB_BASE_PTR->PCR[19] = PORT_PCR_MUX(3);
+    PTB_BASE_PTR->PDDR = 0b11 << 19;
+
     // Locals
     char readout[15];
     uint16_t value;

@@ -1,5 +1,3 @@
-
-
 typedef enum
 {
     NoneClk,
@@ -10,6 +8,7 @@ typedef enum
 
 typedef enum
 {
+	NoOutput,
 	Edge,
 	Center,
 	EdgeInverted
@@ -29,22 +28,28 @@ typedef enum
 
 typedef struct
 {
-	pwm_clock_source_e clock_source;
-	pwm_prescaler_e prescaler_value;
-	uint16_t period_ms;
-	uint32_t xtal_frequency;
-} tpm_config;
+	pwm_clock_source_e eClock_source;
+	pwm_prescaler_e ePrescaler_value;
+	uint16_t uiPeriod_ms;
+	uint32_t uiXtal_frequency;
+} tpm_config_t;
 
 typedef struct
 {
-	pwm_alignment_e alignment;
-	uint16_t pulse_width_ms;
-	char interrupt_enable;
-	uint8_t channel;
-} channel_config;
+	pwm_alignment_e eAlignment;
+	uint16_t uiPulse_width_ms;
+	uint8_t uiInterrupt_enable;
+	uint8_t uiChannel;
+} channel_config_t;
 
-void pwm_initPWM(TPM_Type * timer, tpm_config tpmConfig);
+int pwm_initPWM(TPM_Type * tTimer, tpm_config_t tTpmConfig);
 
-void pwm_channelInit (TPM_Type * timer, tpm_config tpmConfig, channel_config channelConfig);
+int pwm_channelInit (TPM_Type * tTimer, tpm_config tTpmConfig, channel_config_t tChannelConfig);
 
-void pwm_setPortPinPwm(PORT_Type * port, GPIO_Type * gpio, char pinNo);
+int pwm_changeChannelPeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig, uint16_t uiPeriod_ms);
+
+int pwm_changeModulePeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig);
+
+void pwm_disablePwm(TPM_Type * tTimer);
+
+void pwm_enablePwm(TPM_Type * tTimer);
