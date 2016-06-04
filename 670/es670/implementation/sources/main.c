@@ -55,21 +55,26 @@ int main(void)
     //PORTB_PCR18 = PORT_PCR_MUX(1);
     //PTB_BASE_PTR->PDDR = 1 << 18;
 
-    tpm_config tpmConfig;
-    tpmConfig.clock_source = McgIrcClk;
-    tpmConfig.period_ms = 1000;
-    tpmConfig.prescaler_value = Prescaler1;
-    tpmConfig.xtal_frequency = 8000000;
+    tpm_config_t tpmConfig =
+    {
+    		.eClock_source = McgIrcClk,
+			.uiPeriod_ms = 1000,
+			.ePrescaler_value = Prescaler1,
+			.uiXtal_frequency = 32000,
+			.eAlignment = Edge
+    };
 
-    channel_config channelConfig;
-    channelConfig.alignment = Edge;
-    channelConfig.channel = 1;
-    channelConfig.interrupt_enable = 0;
-    channelConfig.pulse_width_ms = 500;
+    channel_config_t channelConfig =
+    {
+    		.eChannelOutput = NoInversion,
+			.uiChannel = 1,
+			.uiInterrupt_enable = 0,
+			.uiPulse_width_ms = 500
+    };
 
-    pwm_initPWM(TPM1,tpmConfig);
+    pwm_initPwm(TPM2, tpmConfig);
     pwm_channelInit (TPM1, tpmConfig, channelConfig);
-    pwm_setPortPinPwm(PORTB, GPIOB, 18);
+
 
     SIM_BASE_PTR->SCGC5 |= SIM_SCGC5_PORTB_MASK;
     PORTB_BASE_PTR->PCR[18] = PORTB_BASE_PTR->PCR[19] = PORT_PCR_MUX(3);

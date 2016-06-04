@@ -8,11 +8,16 @@ typedef enum
 
 typedef enum
 {
-	NoOutput,
 	Edge,
-	Center,
-	EdgeInverted
+	Center
 } pwm_alignment_e;
+
+typedef enum
+{
+	DisableChannel,
+	NoInversion,
+	Inversion
+} pwm_output_e;
 
 typedef enum
 {
@@ -32,14 +37,15 @@ typedef struct
 	pwm_prescaler_e ePrescaler_value;
 	uint16_t uiPeriod_ms;
 	uint32_t uiXtal_frequency;
+	pwm_alignment_e eAlignment;
 } tpm_config_t;
 
 typedef struct
 {
-	pwm_alignment_e eAlignment;
-	uint16_t uiPulse_width_ms;
-	uint8_t uiInterrupt_enable;
 	uint8_t uiChannel;
+	uint16_t uiPulse_width_ms;
+	pwm_output_e eChannelOutput;
+	uint8_t uiInterrupt_enable;
 } channel_config_t;
 
 /**
@@ -59,7 +65,7 @@ int pwm_initPwm(TPM_Type * tTimer, tpm_config_t tTpmConfig);
  * 						tChannelConfig = Configuration for PWM channel
  * Output params:     	int = Error (0) or Success (0)
  */
-int pwm_channelInit (TPM_Type * tTimer, tpm_config tTpmConfig, channel_config_t tChannelConfig);
+int pwm_channelInit (TPM_Type * tTimer, tpm_config_t tTpmConfig, channel_config_t tChannelConfig);
 
 /**
  * Method name:			changeChannelPeriod
