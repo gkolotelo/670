@@ -10,6 +10,7 @@
 #define TPM1_CHANNEL_WIDTH 1
 #define TPM2_CHANNEL_WIDTH 1
 
+//#define BOARD_DEBUG_PWM_INSTANCE
 
 /*
 @ 8MHz min and max periods for prescalers:
@@ -38,7 +39,7 @@ int pwm_initPwm(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 		SIM_BASE_PTR->SCGC6 |= SIM_SCGC6_TPM2_MASK;
 	else return 0;
 
-	cnt_period= (1000*(tTpmConfig.uiXtal_frequency/((2 << tTpmConfig.ePrescaler_value)/2))/tTpmConfig.uiPeriod_ms);
+	cnt_period = (tTpmConfig.uiPeriod_ms*(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value))/1000);
 	if(Center == tTpmConfig.eAlignment)
 		cnt_period = cnt_period/2;
 	if (cnt_period > 65536)
@@ -46,15 +47,19 @@ int pwm_initPwm(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 
 	SIM_BASE_PTR->SOPT2 |= SIM_SOPT2_TPMSRC(tTpmConfig.eClock_source); // Set clock source for TMPx
 
-    tTimer->SC |= TPM_SC_CMOD(0); 					// Disable clock to TMPx  (SC,CMOD)
+	#ifdef BOARD_DEBUG_PWM_INSTANCE
+		tTimer->CONF |= TPM_CONF_DBGMODE(0b11);
+	#endif
+
+	tTimer->SC &= !TPM_SC_CMOD_MASK; 				// Disable clock to TMPx  (SC,CMOD)
     while (tTimer->SC&TPM_SC_CMOD_MASK); 			// Wait to acknowledge tTimer is disabled (SC,CMOD)
     tTimer->SC |= TPM_SC_TOF(0); 					// Clear tTimer Overflow Flag (SC,TOF)
     tTimer->SC |= TPM_SC_CPWMS(tTpmConfig.eAlignment);// Set up counting mode (SC,CPWMS)
     tTimer->CNT = 0;								// Reset Counter  (CNT)
 
     tTimer->MOD = cnt_period;						// Set TPM counter period (MOD)
-    tTimer->SC = TPM_SC_PS(tTpmConfig.ePrescaler_value);
-	tTimer->SC = TPM_SC_CMOD(1);					//Selects the LPTPM counter clock modes
+    tTimer->SC |= TPM_SC_PS(tTpmConfig.ePrescaler_value);
+	tTimer->SC |= TPM_SC_CMOD(1);					//Selects the LPTPM counter clock modes
 
 	return 1;
 }
@@ -64,7 +69,7 @@ int pwm_channelInit (TPM_Type * tTimer, tpm_config_t tTpmConfig, channel_config_
 	uint32_t cnt_period, cnv_period, cnsc;
 
 	cnsc = 0x00;
-	cnt_period = (1000*(tTpmConfig.uiXtal_frequency/((2 << tTpmConfig.ePrescaler_value)/2))/tTpmConfig.uiPeriod_ms);
+	cnt_period = (tTpmConfig.uiPeriod_ms*(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value))/1000);
 	if(Center == tTpmConfig.eAlignment)
 		cnt_period = cnt_period/2;
 	if (cnt_period > 65536)
@@ -95,7 +100,6 @@ int pwm_channelInit (TPM_Type * tTimer, tpm_config_t tTpmConfig, channel_config_
 	if(0 != tChannelConfig.uiInterrupt_enable)
 		cnsc |= TPM_CnSC_CHIE_MASK;
 
-	tTimer->CNT = 0;
 	tTimer->CONTROLS[tChannelConfig.uiChannel].CnSC = cnsc;
 	tTimer->CONTROLS[tChannelConfig.uiChannel].CnV = cnv_period;
 
@@ -106,7 +110,7 @@ int pwm_changeChannelDuty(TPM_Type * tTimer, tpm_config_t tTpmConfig, uint16_t u
 {
 	uint32_t cnt_period, cnv_period;
 
-	cnt_period= (1000*(tTpmConfig.uiXtal_frequency/((2 << tTpmConfig.ePrescaler_value)/2))/tTpmConfig.uiPeriod_ms);
+	cnt_period = (tTpmConfig.uiPeriod_ms*(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value))/1000);
 	if(Center == tTpmConfig.eAlignment)
 		cnt_period = cnt_period/2;
 	if (cnt_period > 65536)
@@ -121,7 +125,7 @@ int pwm_changeModulePeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 {
 	uint32_t cnt_period;
 
-	cnt_period = (1000*(tTpmConfig.uiXtal_frequency/((2 << tTpmConfig.ePrescaler_value)/2))/tTpmConfig.uiPeriod_ms);
+	cnt_period = (tTpmConfig.uiPeriod_ms*(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value))/1000);
 	if(Center == tTpmConfig.eAlignment)
 		cnt_period = cnt_period/2;
 	if (cnt_period > 65536)
@@ -134,7 +138,7 @@ int pwm_changeModulePeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 
 void pwm_deinitPwm(TPM_Type * tTimer)
 {
-	tTimer->SC |= TPM_SC_CMOD(0); 						// Disable clock to TMPx  (SC,CMOD)
+	tTimer->SC &= !TPM_SC_CMOD_MASK; 					// Disable clock to TMPx  (SC,CMOD)
     while (tTimer->SC&TPM_SC_CMOD_MASK); 				// Wait to acknowledge tTimer is disabled (SC,CMOD)
 	tTimer->SC |= TPM_SC_TOF(0); 						// Clear tTimer Overflow Flag (SC,TOF)
     tTimer->CNT = 0;									// Reset Counter  (CNT)
@@ -148,7 +152,7 @@ void pwm_deinitPwm(TPM_Type * tTimer)
 
 void pwm_disableCounter(TPM_Type * tTimer)
 {
-	tTimer->SC |= TPM_SC_CMOD(0); 						// Disable clock to TMPx  (SC,CMOD)
+	tTimer->SC &= !TPM_SC_CMOD_MASK; 					// Disable clock to TMPx  (SC,CMOD)
     while (tTimer->SC&TPM_SC_CMOD_MASK); 				// Wait to acknowledge tTimer is disabled (SC,CMOD)
 }
 

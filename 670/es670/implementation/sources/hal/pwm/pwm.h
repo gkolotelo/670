@@ -101,7 +101,7 @@ void pwm_deinitPwm(TPM_Type * tTimer);
  * Input params:      	tTimer = TPMx base address
  * Output params:     	n/a
  */
-void pwm_disableCounter(TPM_Type * tTimer)
+void pwm_disableCounter(TPM_Type * tTimer);
 
 /**
  * Method name:			enableCounter
@@ -109,4 +109,4 @@ void pwm_disableCounter(TPM_Type * tTimer)
  * Input params:      	tTimer = TPMx base address
  * Output params:     	n/a
  */
-void pwm_enableCounter(TPM_Type * tTimer)
+void pwm_enableCounter(TPM_Type * tTimer);

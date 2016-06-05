@@ -23,4 +23,12 @@
  */
 void cooler_init();
 
+/**
+ * Method name:			cooler_initPwm
+ * Method description: 	Initializes the cooler for PWM control
+ * Input params:      	n/a
+ * Output params:     	n/a
+ */
+void cooler_initPwm();
+
 #endif /* SOURCES_COOLER_H_ */
