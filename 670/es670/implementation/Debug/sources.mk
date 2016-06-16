@@ -32,8 +32,10 @@ sources/hal/pwm \
 sources/hal/mcg \
 sources/hal/ledswi \
 sources/hal/lcd \
+sources/hal/heater \
 sources/hal/display_7segments \
 sources/hal/cooler \
 sources/hal/buzzer \
+sources/hal/adc \
 Project_Settings/Startup_Code \
 

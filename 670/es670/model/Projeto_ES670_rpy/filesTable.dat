@@ -1,7 +1,7 @@
 I-Logix-RPY-Archive version 8.5.2 Modeler * 1159120
 
 - filesTable = { IRPYRawContainer 
-	- size = 19;
+	- size = 20;
 	- value = "Projects.rpl" ""
 	"Projeto_ES670.rpy" ""
 	"Projeto_ES670_rpy\\FRDM_KL25Z.cmp" "FRDM_KL25Z"
@@ -17,6 +17,7 @@ I-Logix-RPY-Archive version 8.5.2 Modeler * 1159120
 	"Projeto_ES670_rpy\\main.sbs" "sources::main"
 	"Projeto_ES670_rpy\\mcg.sbs" "sources::hal::mcg"
 	"Projeto_ES670_rpy\\package_18.sbs" "package_18"
+	"Projeto_ES670_rpy\\pwm.sbs" "sources::hal::pwm"
 	"Projeto_ES670_rpy\\sources.sbs" "sources"
 	"Projeto_ES670_rpy\\tach.sbs" "sources::hal::tach"
 	"Projeto_ES670_rpy\\uart.sbs" "sources::hal::uart"

@@ -7,10 +7,9 @@
  * Authors:          	Guilherme Kairalla Kolotelo                     
  * 		             	Kaique Arce de Almeida Camargo                  
  * Creation date:    	13May2016                                       
- * Revision date:    	20May2016                                       
+ * Revision date:    	03Jun2016                                        
  *
  */
-
 
 #ifndef SOURCES_COOLER_H_
 #define SOURCES_COOLER_H_
@@ -29,6 +28,6 @@ void cooler_init();
  * Input params:      	n/a
  * Output params:     	n/a
  */
-void cooler_initPwm();
+void cooler_initForPwm();
 
 #endif /* SOURCES_COOLER_H_ */

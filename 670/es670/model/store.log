@@ -1,140 +1,28 @@
-05, 20, 2016 (22:53:40): Starting Pre-Save actions
+06, 10, 2016 (13:20:52): Starting Pre-Save actions
 
-05, 20, 2016 (22:53:40): Starting Dialogs Check/Save
-05, 20, 2016 (22:53:40): Finished Dialogs Check/Save
-05, 20, 2016 (22:53:40): Starting Controlled Files Resolution
-05, 20, 2016 (22:53:40): Finished Controlled Files Resolution
-05, 20, 2016 (22:53:40): Finished Pre-Save actions
+06, 10, 2016 (13:20:52): Starting Dialogs Check/Save
+06, 10, 2016 (13:20:52): Finished Dialogs Check/Save
+06, 10, 2016 (13:20:52): Starting Controlled Files Resolution
+06, 10, 2016 (13:20:52): Finished Controlled Files Resolution
+06, 10, 2016 (13:20:52): Finished Pre-Save actions
 
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670.rpy
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670.rpy on Friday, May 20, 2016 (22:53:40)
+06, 10, 2016 (13:20:52): Creating E:\ES670A\670\es670\model\Projeto_ES670.rpy
+06, 10, 2016 (13:20:52): 
+Started writing E:\ES670A\670\es670\model\Projeto_ES670.rpy on Friday, June 10, 2016 (13:20:52)
 
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\filesTable.dat on Friday, May 20, 2016 (22:53:40)
+06, 10, 2016 (13:20:52): version 8.5.2
+06, 10, 2016 (13:20:52): 
+Started writing E:\ES670A\670\es670\model\Projeto_ES670_rpy\filesTable.dat on Friday, June 10, 2016 (13:20:52)
 
-05, 20, 2016 (22:53:40): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\filesTable.dat on Friday, May 20, 2016 (22:53:40)
+06, 10, 2016 (13:20:52): Finished writing E:\ES670A\670\es670\model\Projeto_ES670_rpy\filesTable.dat on Friday, June 10, 2016 (13:20:52)
 
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\_Projeto_Pratico.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\_Projeto_Pratico.sbs on Friday, May 20, 2016 (22:53:40)
+06, 10, 2016 (13:20:52): Creating E:\ES670A\670\es670\model\Projeto_ES670_rpy\cooler.sbs
+06, 10, 2016 (13:20:52): 
+Started writing E:\ES670A\670\es670\model\Projeto_ES670_rpy\cooler.sbs on Friday, June 10, 2016 (13:20:52)
 
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\_Projeto_Pratico.sbs on Friday, May 20, 2016 (22:53:40)
+06, 10, 2016 (13:20:52): version 8.5.2
+06, 10, 2016 (13:20:52): Finished writing E:\ES670A\670\es670\model\Projeto_ES670_rpy\cooler.sbs on Friday, June 10, 2016 (13:20:52)
 
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\_Requisitos.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\_Requisitos.sbs on Friday, May 20, 2016 (22:53:40)
+06, 10, 2016 (13:20:52): Finished writing E:\ES670A\670\es670\model\Projeto_ES670.rpy on Friday, June 10, 2016 (13:20:52)
 
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\_Requisitos.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\sources.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\sources.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\main.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\main.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\main.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\hal.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\hal.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\ledswi.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\ledswi.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\ledswi.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\buzzer.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\buzzer.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\buzzer.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\util.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\util.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\util.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\mcg.sbs
-05, 20, 2016 (22:53:40): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\mcg.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:40): version 8.5.2
-05, 20, 2016 (22:53:40): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\mcg.sbs on Friday, May 20, 2016 (22:53:40)
-
-05, 20, 2016 (22:53:41): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\display_7segments.sbs
-05, 20, 2016 (22:53:41): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\display_7segments.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): version 8.5.2
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\display_7segments.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\es670_peripheral_board.sbs
-05, 20, 2016 (22:53:41): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\es670_peripheral_board.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): version 8.5.2
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\es670_peripheral_board.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\uart.sbs
-05, 20, 2016 (22:53:41): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\uart.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): version 8.5.2
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\uart.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\lcd.sbs
-05, 20, 2016 (22:53:41): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\lcd.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): version 8.5.2
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\lcd.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\cooler.sbs
-05, 20, 2016 (22:53:41): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\cooler.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): version 8.5.2
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\cooler.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\tach.sbs
-05, 20, 2016 (22:53:41): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\tach.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): version 8.5.2
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\tach.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\hal.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\sources.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\package_18.sbs
-05, 20, 2016 (22:53:41): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\package_18.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:41): version 8.5.2
-05, 20, 2016 (22:53:41): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\package_18.sbs on Friday, May 20, 2016 (22:53:41)
-
-05, 20, 2016 (22:53:42): Creating F:\ES670A\670\es670\model\Projeto_ES670_rpy\FRDM_KL25Z.cmp
-05, 20, 2016 (22:53:42): 
-Started writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\FRDM_KL25Z.cmp on Friday, May 20, 2016 (22:53:42)
-
-05, 20, 2016 (22:53:42): version 8.5.2
-05, 20, 2016 (22:53:42): Finished writing F:\ES670A\670\es670\model\Projeto_ES670_rpy\FRDM_KL25Z.cmp on Friday, May 20, 2016 (22:53:42)
-
-05, 20, 2016 (22:53:42): Finished writing F:\ES670A\670\es670\model\Projeto_ES670.rpy on Friday, May 20, 2016 (22:53:42)
-
-05, 20, 2016 (22:53:43): End Log
+06, 10, 2016 (13:20:52): End Log

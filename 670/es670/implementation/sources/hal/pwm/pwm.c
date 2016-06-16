@@ -1,35 +1,40 @@
+/**
+ *
+ * File name:        	pwm.c                             
+ * File description: 	Source file containing methods for initializing
+ * 						and operating the PWM function on TPM modules
+ *           			
+ * Authors:          	Guilherme Kairalla Kolotelo                     
+ * 		             	Kaique Arce de Almeida Camargo                  
+ * Creation date:    	20May2016                                       
+ * Revision date:    	03Jun2016                                        
+ *
+ */
 
-
-
-#include "../es670_peripheral_board.h"
-#include "../mcg/mcg.h"
 #include "pwm.h"
+#include "MKL25Z4.h"
+#include <stdint.h>
+
+#define TPM0_CHANNEL_INSTANCES 6
+#define TPM1_CHANNEL_INSTANCES 2
+#define TPM2_CHANNEL_INSTANCES 2
 
 
-#define TPM0_CHANNEL_WIDTH 5
-#define TPM1_CHANNEL_WIDTH 1
-#define TPM2_CHANNEL_WIDTH 1
-
-//#define BOARD_DEBUG_PWM_INSTANCE
-
+#define BOARD_DEBUG_PWM_INSTANCE
 /*
-@ 8MHz min and max periods for prescalers:
-ps  	min(ms)   	max(ms)
-1		125e-6		8.19
-2		25e-5		16.4
-4		5e-4		32.7
-8		0.001		65.6
-16		0.002		131
-32		0.004		262.1
-64		0.008		524.2
-128		0.016		1048.5
-
+Comment #define above for production code
 */
 
-
+/**
+ * Method name:			initPwm
+ * Method description:  Initializes PWM module with specified configuration
+ * Input params:      	tTimer = TPMx base address
+ * 						tTpmConfig = Configuration for TPM module
+ * Output params:     	int = Error (0) or Success (0)
+ */
 int pwm_initPwm(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 {
-	uint32_t cnt_period;
+	uint64_t cnt_period;
 
 	if(TPM0 == tTimer)
 		SIM_BASE_PTR->SCGC6 |= SIM_SCGC6_TPM0_MASK;
@@ -39,7 +44,7 @@ int pwm_initPwm(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 		SIM_BASE_PTR->SCGC6 |= SIM_SCGC6_TPM2_MASK;
 	else return 0;
 
-	cnt_period = (tTpmConfig.uiPeriod_ms*(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value))/1000);
+	cnt_period = ((tTpmConfig.uiPeriod_us*(uint64_t)(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value)))/1000000);
 	if(Center == tTpmConfig.eAlignment)
 		cnt_period = cnt_period/2;
 	if (cnt_period > 65536)
@@ -64,24 +69,32 @@ int pwm_initPwm(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 	return 1;
 }
 
+/**
+ * Method name:			channelInit
+ * Method description:  Initializes the PWM channel with specified configuration
+ * Input params:      	tTimer = TPMx base address
+ * 						tTpmConfig = Configuration for TPM module
+ * 						tChannelConfig = Configuration for PWM channel
+ * Output params:     	int = Error (0) or Success (0)
+ */
 int pwm_channelInit (TPM_Type * tTimer, tpm_config_t tTpmConfig, channel_config_t tChannelConfig)
 {
-	uint32_t cnt_period, cnv_period, cnsc;
+	uint64_t cnt_period, cnv_period, cnsc;
 
 	cnsc = 0x00;
-	cnt_period = (tTpmConfig.uiPeriod_ms*(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value))/1000);
+	cnt_period = ((tTpmConfig.uiPeriod_us*(uint64_t)(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value)))/1000000);
 	if(Center == tTpmConfig.eAlignment)
 		cnt_period = cnt_period/2;
 	if (cnt_period > 65536)
 		return 0;
-	cnv_period = (cnt_period*tChannelConfig.uiPulse_width_ms)/tTpmConfig.uiPeriod_ms;
+	cnv_period = (cnt_period*tChannelConfig.uiPulse_width_us)/tTpmConfig.uiPeriod_us;
 
 	if(TPM0 == tTimer)
-		if(tChannelConfig.uiChannel > TPM0_CHANNEL_WIDTH) return 0;
+		if(tChannelConfig.uiChannel > TPM0_CHANNEL_INSTANCES - 1) return 0;
 	else if(TPM1 == tTimer)
-		if(tChannelConfig.uiChannel > TPM1_CHANNEL_WIDTH) return 0;
+		if(tChannelConfig.uiChannel > TPM1_CHANNEL_INSTANCES - 1) return 0;
 	else if(TPM2 == tTimer)
-		if(tChannelConfig.uiChannel > TPM2_CHANNEL_WIDTH) return 0;
+		if(tChannelConfig.uiChannel > TPM2_CHANNEL_INSTANCES - 1) return 0;
 	else return 0;
 
 	if(DisableChannel == tChannelConfig.eChannelOutput)
@@ -106,26 +119,42 @@ int pwm_channelInit (TPM_Type * tTimer, tpm_config_t tTpmConfig, channel_config_
 	return 1;
 }
 
-int pwm_changeChannelDuty(TPM_Type * tTimer, tpm_config_t tTpmConfig, uint16_t uiChannel, uint16_t uiPulseWidth_ms)
+/**
+ * Method name:			changeChannelPeriod
+ * Method description:  Changes the period of the PWM on the channel
+ * Input params:      	tTimer = TPMx base address
+ * 						tTpmConfig = Configuration for TPM module
+ * 						uiChannel = PWM channel
+ * 						uiPulseWidth_us = Channel period in us
+ * Output params:     	int = Error (0) or Success (0)
+ */
+int pwm_changeChannelDuty(TPM_Type * tTimer, tpm_config_t tTpmConfig, uint16_t uiChannel, uint32_t uiPulseWidth_us)
 {
-	uint32_t cnt_period, cnv_period;
+	uint64_t cnt_period, cnv_period;
 
-	cnt_period = (tTpmConfig.uiPeriod_ms*(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value))/1000);
+	cnt_period = ((tTpmConfig.uiPeriod_us*(uint64_t)(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value)))/1000000);
 	if(Center == tTpmConfig.eAlignment)
 		cnt_period = cnt_period/2;
 	if (cnt_period > 65536)
 		return 0;
-	cnv_period= (cnt_period*uiPulseWidth_ms)/tTpmConfig.uiPeriod_ms;
+	cnv_period= (cnt_period*uiPulseWidth_us)/tTpmConfig.uiPeriod_us;
 
 	tTimer->CONTROLS[uiChannel].CnV = cnv_period;
 	return 1;
 }
 
+/**
+ * Method name:			changeModulePeriod
+ * Method description:  Changes the TPM module period
+ * Input params:      	tTimer = TPMx base address
+ * 						tTpmConfig = Configuration for TPM module
+ * Output params:     	int = Error (0) or Success (0)  	                        
+ */
 int pwm_changeModulePeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 {
-	uint32_t cnt_period;
+	uint64_t cnt_period;
 
-	cnt_period = (tTpmConfig.uiPeriod_ms*(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value))/1000);
+	cnt_period = ((tTpmConfig.uiPeriod_us*(uint64_t)(tTpmConfig.uiXtal_frequency/(1 << tTpmConfig.ePrescaler_value)))/1000000);
 	if(Center == tTpmConfig.eAlignment)
 		cnt_period = cnt_period/2;
 	if (cnt_period > 65536)
@@ -136,6 +165,12 @@ int pwm_changeModulePeriod(TPM_Type * tTimer, tpm_config_t tTpmConfig)
 	return 1;
 }
 
+/**
+ * Method name:			deinitPwm
+ * Method description:  Deinitializes PWM module
+ * Input params:      	tTimer = TPMx base address
+ * Output params:     	n/a
+ */
 void pwm_deinitPwm(TPM_Type * tTimer)
 {
 	tTimer->SC &= !TPM_SC_CMOD_MASK; 					// Disable clock to TMPx  (SC,CMOD)
@@ -150,12 +185,24 @@ void pwm_deinitPwm(TPM_Type * tTimer)
 		SIM_BASE_PTR->SCGC6 &= !SIM_SCGC6_TPM2_MASK;
 }
 
+/**
+ * Method name:			disableCounter
+ * Method description:  Disables the module counter
+ * Input params:      	tTimer = TPMx base address
+ * Output params:     	n/a
+ */
 void pwm_disableCounter(TPM_Type * tTimer)
 {
 	tTimer->SC &= !TPM_SC_CMOD_MASK; 					// Disable clock to TMPx  (SC,CMOD)
     while (tTimer->SC&TPM_SC_CMOD_MASK); 				// Wait to acknowledge tTimer is disabled (SC,CMOD)
 }
 
+/**
+ * Method name:			enableCounter
+ * Method description:  Enables the module counter
+ * Input params:      	tTimer = TPMx base address
+ * Output params:     	n/a
+ */
 void pwm_enableCounter(TPM_Type * tTimer)
 {
 	tTimer->SC |= TPM_SC_CMOD(1);

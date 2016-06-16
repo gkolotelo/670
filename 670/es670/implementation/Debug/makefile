@@ -15,9 +15,11 @@ RM := rm -rf
 -include sources/hal/mcg/subdir.mk
 -include sources/hal/ledswi/subdir.mk
 -include sources/hal/lcd/subdir.mk
+-include sources/hal/heater/subdir.mk
 -include sources/hal/display_7segments/subdir.mk
 -include sources/hal/cooler/subdir.mk
 -include sources/hal/buzzer/subdir.mk
+-include sources/hal/adc/subdir.mk
 -include sources/subdir.mk
 -include Project_Settings/Startup_Code/subdir.mk
 -include subdir.mk

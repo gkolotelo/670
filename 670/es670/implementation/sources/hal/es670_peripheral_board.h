@@ -134,4 +134,13 @@
 
 /*              END OF TACH DEFINITIONS                   */
 
+/*                 HEATER DEFINITIONS                     */
+#define HEATER_PIN 					12U
+#define HEATER_ALT					0X03
+/*             END OF HEATER DEFINITIONS                  */
+
+/*                   ADC DEFINITIONS                      */
+
+/*               END OF ADC DEFINITIONS                   */
+
 #endif /* SOURCES_ES670_PERIPHERAL_BOARD_H_ */

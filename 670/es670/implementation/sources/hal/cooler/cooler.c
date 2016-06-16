@@ -7,7 +7,7 @@
  * Authors:          	Guilherme Kairalla Kolotelo                     
  * 		             	Kaique Arce de Almeida Camargo                  
  * Creation date:    	13May2016                                       
- * Revision date:    	20May2016                                       
+ * Revision date:    	03Jun2016                                       
  *
  */
 
@@ -34,7 +34,7 @@ void cooler_init()
  * Input params:      	n/a
  * Output params:     	n/a
  */
-void cooler_initPwm()
+void cooler_initForPwm()
 {
 	SIM_SCGC5 |= SIM_SCGC5_PORTA_MASK;
 	PORTA_PCR13 = PORT_PCR_MUX(3);
